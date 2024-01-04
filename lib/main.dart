@@ -1,3 +1,4 @@
+import 'package:big_cart/screens/splash_1.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -8,7 +9,7 @@ void main() {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const HomPage(),
+      home: const SplashScreen(),
     ),
   );
 }

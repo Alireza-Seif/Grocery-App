@@ -4,7 +4,9 @@ import 'package:flutter/foundation.dart' show immutable;
 class AppString {
 //Splash Screen
   static const splashScreenText = '''Lorem ipsum dolor sit amet, consetetur 
-sadipscing elitr, sed diam nonumy''';
+      sadipscing elitr, sed diam nonumy''';
+
+  static const splashButtonText = 'Get started';
 
 // Auth
   static const welcomeText = '''Lorem ipsum dolor sit amet, consetetur 
