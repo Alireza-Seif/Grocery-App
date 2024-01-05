@@ -1,0 +1,10 @@
+* linguist-detectable=false
+
+# Dart and Flutter files
+*.dart linguist-detectable=true
+*.flutter linguist-detectable=true
+
+# C++ and CMake files
+*.cpp linguist-detectable=false
+*.h linguist-detectable=false
+CMakeLists.txt linguist-detectable=false
