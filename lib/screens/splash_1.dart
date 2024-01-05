@@ -1,4 +1,6 @@
+import 'package:big_cart/components/buttons/elevated_button.dart';
 import 'package:big_cart/constants/langs/app_strings.dart';
+import 'package:big_cart/constants/themes/app_theme.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatelessWidget {
@@ -9,7 +11,7 @@ class SplashScreen extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Container(
-          padding: const EdgeInsets.fromLTRB(0, 100, 0, 40),
+          padding: const EdgeInsets.fromLTRB(0, 100, 0, 30),
           decoration: const BoxDecoration(
             image: DecorationImage(
                 image: AssetImage('assets/images/splash1.png'),
@@ -21,18 +23,19 @@ class SplashScreen extends StatelessWidget {
               children: [
                 const Text(
                   'Welcome to',
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
+                  style: MyTextStyles.titleStyle,
                 ),
                 const Image(
                   image: AssetImage('assets/images/bigCart1.png'),
                 ),
                 const Text(
                   AppString.splashScreenText,
-                  style: TextStyle(fontSize: 15, fontWeight: FontWeight.w500),
+                  style: MyTextStyles.bodyText,
                 ),
-                SizedBox(height: 500,),
-                ElevatedButton(
-                    onPressed: () {}, child: const Text(AppString.splashButtonText))
+                const SizedBox(height: 525,),
+                CustomElevatedButton(onPressedCallback: () {
+                  
+                },)
               ],
             ),
           ),
