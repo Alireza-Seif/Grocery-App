@@ -3,18 +3,18 @@ import 'package:big_cart/constants/langs/app_strings.dart';
 import 'package:big_cart/constants/themes/app_theme.dart';
 import 'package:flutter/material.dart';
 
-class SplashScreen extends StatelessWidget {
-  const SplashScreen({super.key});
+class SplashScreen4 extends StatelessWidget {
+  const SplashScreen4({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
         child: Container(
-          padding: const EdgeInsets.fromLTRB(0, 100, 0, 30),
+          padding: const EdgeInsets.fromLTRB(0, 59, 0, 0),
           decoration: const BoxDecoration(
             image: DecorationImage(
-                image: AssetImage('assets/images/splash1.png'),
+                image: AssetImage('assets/images/splash4.png'),
                 fit: BoxFit.cover),
           ),
           child:  Center(
@@ -22,17 +22,16 @@ class SplashScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 const Text(
-                  'Welcome to',
+                  ''' Get Discounts 
+On All Products''',
                   style: MyTextStyles.titleStyle,
                 ),
-                const Image(
-                  image: AssetImage('assets/images/bigCart1.png'),
-                ),
+                const SizedBox(height: 17,),
                 const Text(
                   AppString.splashScreenText,
                   style: MyTextStyles.bodyText,
                 ),
-                const SizedBox(height: 525,),
+                const SizedBox(height: 531),
                 CustomElevatedButton(onPressedCallback: () {
                   
                 },)
