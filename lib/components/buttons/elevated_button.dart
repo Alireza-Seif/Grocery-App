@@ -8,11 +8,8 @@ class CustomElevatedButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: () {
-      onPressedCallback;
-      },
+      onPressed: onPressedCallback,
       style: ElevatedButton.styleFrom(
-       
         elevation: 0,
         padding: EdgeInsets.zero,
         shape: RoundedRectangleBorder(
@@ -24,7 +21,10 @@ class CustomElevatedButton extends StatelessWidget {
           gradient: const LinearGradient(
             begin: Alignment(0.92, 0.0),
             end: Alignment(0.0, 1.0),
-            colors: [ Color(0xFF6CC51D),Color(0xFFAEDC81),],
+            colors: [
+              Color(0xFF6CC51D),
+              Color(0xFFAEDC81),
+            ],
           ),
           borderRadius: BorderRadius.circular(5.0),
         ),

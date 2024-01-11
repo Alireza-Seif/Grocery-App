@@ -2,6 +2,7 @@ import 'package:big_cart/components/buttons/elevated_button.dart';
 import 'package:big_cart/constants/langs/app_strings.dart';
 import 'package:big_cart/constants/themes/app_theme.dart';
 import 'package:flutter/material.dart';
+import 'splash_4.dart';
 
 class SplashScreen3 extends StatelessWidget {
   const SplashScreen3({super.key});
@@ -33,7 +34,10 @@ Quality Fruits''',
                 ),
                 const SizedBox(height: 531),
                 CustomElevatedButton(onPressedCallback: () {
-                  
+                  Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const SplashScreen4()),
+                );
                 },)
               ],
             ),

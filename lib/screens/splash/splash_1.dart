@@ -1,6 +1,7 @@
 import 'package:big_cart/components/buttons/elevated_button.dart';
 import 'package:big_cart/constants/langs/app_strings.dart';
 import 'package:big_cart/constants/themes/app_theme.dart';
+import 'package:big_cart/screens/splash/splash_2.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen1 extends StatelessWidget {
@@ -27,14 +28,17 @@ class SplashScreen1 extends StatelessWidget {
                 ),
                 const Image(
                   image: AssetImage('assets/images/bigCart1.png'),
-                ),SizedBox(height: 14),
+                ),const SizedBox(height: 14),
                 const Text(
                   AppString.splashScreenText,
                   style: MyTextStyles.bodyText,
                 ),
                 const SizedBox(height: 531),
                 CustomElevatedButton(onPressedCallback: () {
-                  
+                  Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const SplashScreen2()),
+                );
                 },)
               ],
             ),

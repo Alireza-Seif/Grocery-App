@@ -1,6 +1,7 @@
 import 'package:big_cart/components/buttons/elevated_button.dart';
 import 'package:big_cart/constants/langs/app_strings.dart';
 import 'package:big_cart/constants/themes/app_theme.dart';
+import 'package:big_cart/main.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen4 extends StatelessWidget {
@@ -33,7 +34,10 @@ On All Products''',
                 ),
                 const SizedBox(height: 531),
                 CustomElevatedButton(onPressedCallback: () {
-                  
+                  Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const HomPage()),
+                );
                 },)
               ],
             ),
