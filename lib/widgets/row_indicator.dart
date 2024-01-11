@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 class RowIndicator extends StatelessWidget {
   final int currentIndex;
 
-  RowIndicator({required this.currentIndex});
+  const RowIndicator({super.key, required this.currentIndex});
 
   @override
   Widget build(BuildContext context) {

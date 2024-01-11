@@ -40,7 +40,7 @@ Quality Fruits''',
                   AppString.splashScreenText,
                   style: MyTextStyles.bodyText,
                 ),
-                const SizedBox(height: 511),
+                const SizedBox(height: 479),
                 RowIndicator(currentIndex: currentIndex + 2),  
                 const SizedBox(height: 32),
                 CustomElevatedButton(onPressedCallback: () {

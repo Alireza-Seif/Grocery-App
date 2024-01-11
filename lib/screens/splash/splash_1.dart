@@ -41,7 +41,7 @@ class _SplashScreen1State extends State<SplashScreen1> {
                   AppString.splashScreenText,
                   style: MyTextStyles.bodyText,
                 ),
-                const SizedBox(height: 511),
+                const SizedBox(height: 479),
                 RowIndicator(currentIndex: currentIndex), 
                 const SizedBox(height: 32),
                 CustomElevatedButton(onPressedCallback: () {
