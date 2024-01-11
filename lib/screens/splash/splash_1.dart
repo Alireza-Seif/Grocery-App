@@ -2,11 +2,19 @@ import 'package:big_cart/components/buttons/elevated_button.dart';
 import 'package:big_cart/constants/langs/app_strings.dart';
 import 'package:big_cart/constants/themes/app_theme.dart';
 import 'package:big_cart/screens/splash/splash_2.dart';
+import 'package:big_cart/widgets/row_indicator.dart';
 import 'package:flutter/material.dart';
 
-class SplashScreen1 extends StatelessWidget {
+class SplashScreen1 extends StatefulWidget {
   const SplashScreen1({super.key});
 
+  @override
+  State<SplashScreen1> createState() => _SplashScreen1State();
+}
+
+class _SplashScreen1State extends State<SplashScreen1> {
+  int currentIndex = 0;
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,7 +41,9 @@ class SplashScreen1 extends StatelessWidget {
                   AppString.splashScreenText,
                   style: MyTextStyles.bodyText,
                 ),
-                const SizedBox(height: 531),
+                const SizedBox(height: 511),
+                RowIndicator(currentIndex: currentIndex), 
+                const SizedBox(height: 32),
                 CustomElevatedButton(onPressedCallback: () {
                   Navigator.pushReplacement(
                   context,

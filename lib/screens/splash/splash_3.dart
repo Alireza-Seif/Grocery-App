@@ -1,11 +1,19 @@
 import 'package:big_cart/components/buttons/elevated_button.dart';
 import 'package:big_cart/constants/langs/app_strings.dart';
 import 'package:big_cart/constants/themes/app_theme.dart';
+import 'package:big_cart/widgets/row_indicator.dart';
 import 'package:flutter/material.dart';
 import 'splash_4.dart';
 
-class SplashScreen3 extends StatelessWidget {
+class SplashScreen3 extends StatefulWidget {
   const SplashScreen3({super.key});
+
+  @override
+  State<SplashScreen3> createState() => _SplashScreen3State();
+}
+
+class _SplashScreen3State extends State<SplashScreen3> {
+   int currentIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +40,9 @@ Quality Fruits''',
                   AppString.splashScreenText,
                   style: MyTextStyles.bodyText,
                 ),
-                const SizedBox(height: 531),
+                const SizedBox(height: 511),
+                RowIndicator(currentIndex: currentIndex + 2),  
+                const SizedBox(height: 32),
                 CustomElevatedButton(onPressedCallback: () {
                   Navigator.pushReplacement(
                   context,

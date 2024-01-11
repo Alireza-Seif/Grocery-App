@@ -2,10 +2,18 @@ import 'package:big_cart/components/buttons/elevated_button.dart';
 import 'package:big_cart/constants/langs/app_strings.dart';
 import 'package:big_cart/constants/themes/app_theme.dart';
 import 'package:big_cart/screens/splash/splash_3.dart';
+import 'package:big_cart/widgets/row_indicator.dart';
 import 'package:flutter/material.dart';
 
-class SplashScreen2 extends StatelessWidget {
+class SplashScreen2 extends StatefulWidget {
   const SplashScreen2({super.key});
+
+  @override
+  State<SplashScreen2> createState() => _SplashScreen2State();
+}
+
+class _SplashScreen2State extends State<SplashScreen2> {
+   int currentIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -32,8 +40,13 @@ Dairy Products''',
                   AppString.splashScreenText,
                   style: MyTextStyles.bodyText,
                 ),
-                const SizedBox(height: 531),
+                const SizedBox(height: 511),
+                RowIndicator(currentIndex: currentIndex + 1), 
+                const SizedBox(height: 32),
                 CustomElevatedButton(onPressedCallback: () {
+                  setState(() {
+                      currentIndex = 1;
+                    });
                   Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(builder: (context) => const SplashScreen3()),
