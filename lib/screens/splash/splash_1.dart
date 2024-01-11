@@ -35,7 +35,7 @@ class SplashScreen1 extends StatelessWidget {
                 ),
                 const SizedBox(height: 531),
                 CustomElevatedButton(onPressedCallback: () {
-                  Navigator.push(
+                  Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(builder: (context) => const SplashScreen2()),
                 );
