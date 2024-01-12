@@ -23,7 +23,7 @@ class _SplashScreen2State extends State<SplashScreen2> {
           padding: const EdgeInsets.fromLTRB(0, 59, 0, 0),
           decoration: const BoxDecoration(
             image: DecorationImage(
-                image: AssetImage('assets/images/splash2.png'),
+                image: AssetImage('assets/images/splash/splash2.png'),
                 fit: BoxFit.cover),
           ),
           child:  Center(

@@ -14,7 +14,7 @@ class SplashScreen1 extends StatefulWidget {
 
 class _SplashScreen1State extends State<SplashScreen1> {
   int currentIndex = 0;
-  
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,10 +23,10 @@ class _SplashScreen1State extends State<SplashScreen1> {
           padding: const EdgeInsets.fromLTRB(0, 59, 0, 0),
           decoration: const BoxDecoration(
             image: DecorationImage(
-                image: AssetImage('assets/images/splash1.png'),
+                image: AssetImage('assets/images/splash/splash1.png'),
                 fit: BoxFit.cover),
           ),
-          child:  Center(
+          child: Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
@@ -36,20 +36,24 @@ class _SplashScreen1State extends State<SplashScreen1> {
                 ),
                 const Image(
                   image: AssetImage('assets/images/bigCart1.png'),
-                ),const SizedBox(height: 14),
+                ),
+                const SizedBox(height: 14),
                 const Text(
                   AppString.splashScreenText,
                   style: MyTextStyles.bodyText,
                 ),
                 const SizedBox(height: 479),
-                RowIndicator(currentIndex: currentIndex), 
+                RowIndicator(currentIndex: currentIndex),
                 const SizedBox(height: 32),
-                CustomElevatedButton(onPressedCallback: () {
-                  Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(builder: (context) => const SplashScreen2()),
-                );
-                },)
+                CustomElevatedButton(
+                  onPressedCallback: () {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const SplashScreen2()),
+                    );
+                  },
+                ),
               ],
             ),
           ),
