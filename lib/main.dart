@@ -1,5 +1,6 @@
-import 'package:big_cart/screens/auth/auth_wdlcome.dart';
 import 'package:flutter/material.dart';
+
+import 'screens/auth/auth_wdlcome.dart';
 
 
 void main() {

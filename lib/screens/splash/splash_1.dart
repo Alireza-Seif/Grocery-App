@@ -1,9 +1,10 @@
-import 'package:big_cart/components/buttons/elevated_button.dart';
-import 'package:big_cart/constants/langs/app_strings.dart';
-import 'package:big_cart/constants/themes/app_theme.dart';
-import 'package:big_cart/screens/splash/splash_2.dart';
-import 'package:big_cart/widgets/row_indicator.dart';
 import 'package:flutter/material.dart';
+import 'package:grocery/components/buttons/elevated_button.dart';
+import 'package:grocery/constants/langs/app_strings.dart';
+import 'package:grocery/screens/splash/splash_2.dart';
+
+import '../../constants/themes/app_theme.dart';
+import '../../widgets/row_indicator.dart';
 
 class SplashScreen1 extends StatefulWidget {
   const SplashScreen1({super.key});
@@ -32,7 +33,7 @@ class _SplashScreen1State extends State<SplashScreen1> {
               children: [
                 const Text(
                   'Welcome to',
-                  style: MyTextStyles.titleStyle,
+                  style: MyTextStyles.titleStyle1,
                 ),
                 const Image(
                   image: AssetImage('assets/images/bigCart1.png'),

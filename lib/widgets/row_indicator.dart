@@ -1,5 +1,6 @@
-import 'package:big_cart/constants/themes/colors/app_colors.dart';
 import 'package:flutter/material.dart';
+
+import '../constants/themes/colors/app_colors.dart';
 
 class RowIndicator extends StatelessWidget {
   final int currentIndex;

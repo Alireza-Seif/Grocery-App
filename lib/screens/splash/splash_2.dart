@@ -1,9 +1,10 @@
-import 'package:big_cart/components/buttons/elevated_button.dart';
-import 'package:big_cart/constants/langs/app_strings.dart';
-import 'package:big_cart/constants/themes/app_theme.dart';
-import 'package:big_cart/screens/splash/splash_3.dart';
-import 'package:big_cart/widgets/row_indicator.dart';
 import 'package:flutter/material.dart';
+
+import '../../components/buttons/elevated_button.dart';
+import '../../constants/langs/app_strings.dart';
+import '../../constants/themes/app_theme.dart';
+import '../../widgets/row_indicator.dart';
+import 'splash_3.dart';
 
 class SplashScreen2 extends StatefulWidget {
   const SplashScreen2({super.key});
@@ -33,7 +34,7 @@ class _SplashScreen2State extends State<SplashScreen2> {
                 const Text(
                   '''   Buy Quality 
 Dairy Products''',
-                  style: MyTextStyles.titleStyle,
+                  style: MyTextStyles.titleStyle1,
                 ),
                 const SizedBox(height: 17,),
                 const Text(
