@@ -1,4 +1,4 @@
-import 'package:big_cart/screens/splash/splash_1.dart';
+import 'package:big_cart/screens/auth/auth_wdlcome.dart';
 import 'package:flutter/material.dart';
 
 
@@ -7,7 +7,7 @@ void main() {
     const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      home: SplashScreen1(),
+      home: WelcomeScreen(),
     ),
   );
 }

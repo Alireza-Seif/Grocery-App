@@ -15,4 +15,10 @@ class MyTextStyles {
     fontFamily: 'Poppins',
     color: AppColors.text2,
   );
+  static const TextStyle titel1 = TextStyle(
+    fontSize: 18,
+    fontWeight: FontWeight.w500,
+    fontFamily: 'Poppins',
+    color: Colors.white,
+  );
 }

@@ -1,7 +1,7 @@
 import 'package:big_cart/components/buttons/elevated_button.dart';
 import 'package:big_cart/constants/langs/app_strings.dart';
 import 'package:big_cart/constants/themes/app_theme.dart';
-import 'package:big_cart/main.dart';
+import 'package:big_cart/screens/auth/auth_wdlcome.dart';
 import 'package:big_cart/widgets/row_indicator.dart';
 import 'package:flutter/material.dart';
 
@@ -46,7 +46,7 @@ On All Products''',
                 CustomElevatedButton(onPressedCallback: () {
                   Navigator.pushReplacement(
                   context,
-                  MaterialPageRoute(builder: (context) => const HomPage()),
+                  MaterialPageRoute(builder: (context) => const WelcomeScreen()),
                 );
                 },)
               ],
