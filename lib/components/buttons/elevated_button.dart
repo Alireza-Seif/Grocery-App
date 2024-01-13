@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../constants/themes/colors/app_colors.dart';
+
 class CustomElevatedButton extends StatelessWidget {
   const CustomElevatedButton({super.key, required this.onPressedCallback});
 
@@ -22,8 +24,8 @@ class CustomElevatedButton extends StatelessWidget {
             begin: Alignment(0.92, 0.0),
             end: Alignment(0.0, 1.0),
             colors: [
-              Color(0xFF6CC51D),
-              Color(0xFFAEDC81),
+              AppColors.primaryDark,
+              AppColors.primary,
             ],
           ),
           borderRadius: BorderRadius.circular(5.0),
