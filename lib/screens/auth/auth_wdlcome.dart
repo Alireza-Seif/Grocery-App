@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:grocery/screens/splash/splash_2.dart';
 
-
 import '../../components/buttons/auth_button.dart';
+import '../../components/buttons/google_button.dart';
 import '../../constants/langs/app_strings.dart';
 import '../../constants/themes/app_theme.dart';
 import '../../constants/themes/colors/app_colors.dart';
@@ -52,7 +52,7 @@ class WelcomeScreen extends StatelessWidget {
                       borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(10),
                           topRight: Radius.circular(10))),
-                  child:   Column(
+                  child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
                       const Text(
@@ -63,13 +63,16 @@ class WelcomeScreen extends StatelessWidget {
                         AppString.forgotPasswordText,
                         style: MyTextStyles.bodyText,
                       ),
-                      AuthButton(onPressedCallback: () {
-                    Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const SplashScreen2()),
-                    );
-                  },),
+                      GoogleSignInButton(),
+                      AuthButton(
+                        onPressedCallback: () {
+                          Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const SplashScreen2()),
+                          );
+                        },
+                      ),
                     ],
                   ),
                 ),
