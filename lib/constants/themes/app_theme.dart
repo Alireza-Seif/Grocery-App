@@ -27,4 +27,11 @@ class MyTextStyles {
     fontSize: 25,
     fontFamily: 'Poppins'
   );
+
+  static const TextStyle styleText1 = TextStyle(
+                  color: Colors.black,
+                  fontSize: 15.0,
+                  fontFamily: 'Poppins',
+                  fontWeight: FontWeight.w600,
+                );
 }

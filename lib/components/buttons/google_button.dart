@@ -1,6 +1,8 @@
 
 import 'package:flutter/material.dart';
 
+import '../../constants/themes/app_theme.dart';
+
 
 class GoogleSignInButton extends StatelessWidget {
   
@@ -33,12 +35,7 @@ class GoogleSignInButton extends StatelessWidget {
               ),
               Text(
                 'Create an account',
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 15.0,
-                  fontFamily: 'Poppins',
-                  fontWeight: FontWeight.w600,
-                ),
+                style: MyTextStyles.styleText1
               ),
               SizedBox(
                 width: 60,
