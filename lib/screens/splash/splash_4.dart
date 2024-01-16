@@ -14,7 +14,7 @@ class SplashScreen4 extends StatefulWidget {
 }
 
 class _SplashScreen4State extends State<SplashScreen4> {
-   int currentIndex = 0;
+  int currentIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +27,7 @@ class _SplashScreen4State extends State<SplashScreen4> {
                 image: AssetImage('assets/images/splash/splash4.png'),
                 fit: BoxFit.cover),
           ),
-          child:  Center(
+          child: Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
@@ -36,20 +36,25 @@ class _SplashScreen4State extends State<SplashScreen4> {
 On All Products''',
                   style: MyTextStyles.titleStyle1,
                 ),
-                const SizedBox(height: 17,),
+                const SizedBox(
+                  height: 17,
+                ),
                 const Text(
                   AppString.splashScreenText,
                   style: MyTextStyles.bodyText,
                 ),
                 const SizedBox(height: 479),
-                RowIndicator(currentIndex: currentIndex + 3), 
+                RowIndicator(currentIndex: currentIndex + 3),
                 const SizedBox(height: 32),
-                CustomElevatedButton(onPressedCallback: () {
-                  Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(builder: (context) => const WelcomeScreen()),
-                );
-                },)
+                CustomElevatedButton(
+                  onPressedCallback: () {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const WelcomeScreen()),
+                    );
+                  },
+                ),
               ],
             ),
           ),

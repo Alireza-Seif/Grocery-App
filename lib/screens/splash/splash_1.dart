@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:grocery/components/buttons/elevated_button.dart';
 import 'package:grocery/constants/langs/app_strings.dart';
-import 'package:grocery/screens/splash/splash_2.dart';
 
 import '../../constants/themes/app_theme.dart';
 import '../../widgets/row_indicator.dart';
@@ -14,6 +13,7 @@ class SplashScreen1 extends StatefulWidget {
 }
 
 class _SplashScreen1State extends State<SplashScreen1> {
+  final PageController _pageController = PageController();
   int currentIndex = 0;
 
   @override
@@ -48,11 +48,12 @@ class _SplashScreen1State extends State<SplashScreen1> {
                 const SizedBox(height: 32),
                 CustomElevatedButton(
                   onPressedCallback: () {
-                    Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const SplashScreen2()),
-                    );
+                    if (_pageController.hasClients) {
+                      _pageController.nextPage(
+                        duration: const Duration(milliseconds: 500),
+                        curve: Curves.ease,
+                      );
+                    }
                   },
                 ),
               ],

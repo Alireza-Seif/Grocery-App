@@ -3,7 +3,6 @@ import '../../components/buttons/elevated_button.dart';
 import '../../constants/langs/app_strings.dart';
 import '../../constants/themes/app_theme.dart';
 import '../../widgets/row_indicator.dart';
-import 'splash_4.dart';
 
 class SplashScreen3 extends StatefulWidget {
   const SplashScreen3({super.key});
@@ -13,7 +12,8 @@ class SplashScreen3 extends StatefulWidget {
 }
 
 class _SplashScreen3State extends State<SplashScreen3> {
-   int currentIndex = 0;
+   final PageController _pageController = PageController();
+  int currentIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -43,12 +43,16 @@ Quality Fruits''',
                 const SizedBox(height: 479),
                 RowIndicator(currentIndex: currentIndex + 2),  
                 const SizedBox(height: 32),
-                CustomElevatedButton(onPressedCallback: () {
-                  Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(builder: (context) => const SplashScreen4()),
-                );
-                },)
+                CustomElevatedButton(
+                  onPressedCallback: () {
+                    if (_pageController.hasClients) {
+                      _pageController.nextPage(
+                        duration: const Duration(milliseconds: 500),
+                        curve: Curves.ease,
+                      );
+                    }
+                  },
+                ),
               ],
             ),
           ),

@@ -4,7 +4,6 @@ import '../../components/buttons/elevated_button.dart';
 import '../../constants/langs/app_strings.dart';
 import '../../constants/themes/app_theme.dart';
 import '../../widgets/row_indicator.dart';
-import 'splash_3.dart';
 
 class SplashScreen2 extends StatefulWidget {
   const SplashScreen2({super.key});
@@ -14,7 +13,8 @@ class SplashScreen2 extends StatefulWidget {
 }
 
 class _SplashScreen2State extends State<SplashScreen2> {
-   int currentIndex = 0;
+  final PageController _pageController = PageController();
+  int currentIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +27,7 @@ class _SplashScreen2State extends State<SplashScreen2> {
                 image: AssetImage('assets/images/splash/splash2.png'),
                 fit: BoxFit.cover),
           ),
-          child:  Center(
+          child: Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
@@ -36,23 +36,26 @@ class _SplashScreen2State extends State<SplashScreen2> {
 Dairy Products''',
                   style: MyTextStyles.titleStyle1,
                 ),
-                const SizedBox(height: 17,),
+                const SizedBox(
+                  height: 17,
+                ),
                 const Text(
                   AppString.splashScreenText,
                   style: MyTextStyles.bodyText,
                 ),
                 const SizedBox(height: 479),
-                RowIndicator(currentIndex: currentIndex + 1), 
+                RowIndicator(currentIndex: currentIndex + 1),
                 const SizedBox(height: 32),
-                CustomElevatedButton(onPressedCallback: () {
-                  setState(() {
-                      currentIndex = 1;
-                    });
-                  Navigator.pushReplacement(
-                  context,
-                  MaterialPageRoute(builder: (context) => const SplashScreen3()),
-                );
-                },)
+                CustomElevatedButton(
+                  onPressedCallback: () {
+                    if (_pageController.hasClients) {
+                      _pageController.nextPage(
+                        duration: const Duration(milliseconds: 500),
+                        curve: Curves.ease,
+                      );
+                    }
+                  },
+                )
               ],
             ),
           ),

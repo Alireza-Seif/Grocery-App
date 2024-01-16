@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:grocery/screens/splash/splash_1.dart';
+import 'package:grocery/screens/intro_slider.dart';
 
 
 
@@ -8,7 +8,7 @@ void main() {
     const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      home: SplashScreen1(),
+      home: IntroSliderPage(),
     ),
   );
 }
