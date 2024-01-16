@@ -1,10 +1,14 @@
 
 import 'package:flutter/material.dart';
+import 'package:grocery/constants/app_icons.dart';
 
 import '../../constants/themes/app_theme.dart';
+import '../icon/icon_view.dart';
 
 
 class GoogleSignInButton extends StatelessWidget {
+  const GoogleSignInButton({super.key});
+
   
 
 
@@ -26,10 +30,10 @@ class GoogleSignInButton extends StatelessWidget {
             maxWidth: 380.0,
             maxHeight: 60.0,
           ),
-          child: const Row(
+          child:   const Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Icon(Icons.g_translate,size: 26,color: Colors.black,),
+              IconView(icon: AppIcons.google, ),
               SizedBox(
                 width: 60,
               ),

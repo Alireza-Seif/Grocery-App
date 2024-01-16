@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:grocery/components/icon/icon_view.dart';
+import 'package:grocery/constants/app_icons.dart';
 
 import '../../constants/themes/colors/app_colors.dart';
 
@@ -47,7 +49,7 @@ class AuthButton extends StatelessWidget {
           child: const Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Icon(Icons.account_circle_outlined,size: 26,),
+              IconView(icon: AppIcons.vector,),
               SizedBox(
                 width: 60,
               ),
