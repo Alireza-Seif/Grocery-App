@@ -3,9 +3,11 @@ import 'package:flutter/material.dart';
 import '../../constants/themes/colors/app_colors.dart';
 
 class CustomElevatedButton extends StatelessWidget {
-  const CustomElevatedButton({super.key, required this.onPressedCallback});
+  const CustomElevatedButton(
+      {super.key, required this.onPressedCallback, required this.buttonText});
 
   final VoidCallback onPressedCallback;
+  final String buttonText;
 
   @override
   Widget build(BuildContext context) {
@@ -36,9 +38,9 @@ class CustomElevatedButton extends StatelessWidget {
             maxWidth: 380.0,
             maxHeight: 60.0,
           ),
-          child: const Text(
-            'Get started',
-            style: TextStyle(
+          child: Text(
+            buttonText,
+            style: const TextStyle(
               color: Colors.white,
               fontSize: 15.0,
               fontFamily: 'Poppins',

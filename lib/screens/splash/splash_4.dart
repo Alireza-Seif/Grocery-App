@@ -47,6 +47,7 @@ On All Products''',
                 RowIndicator(currentIndex: currentIndex + 3),
                 const SizedBox(height: 32),
                 CustomElevatedButton(
+                  buttonText: 'Get started',
                   onPressedCallback: () {
                     Navigator.pushReplacement(
                       context,

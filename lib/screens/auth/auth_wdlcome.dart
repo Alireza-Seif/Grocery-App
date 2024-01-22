@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grocery/screens/auth/auth_login.dart';
 import 'package:grocery/screens/splash/splash_1.dart';
 
 import '../../components/buttons/auth_button.dart';
@@ -18,7 +19,7 @@ class WelcomeScreen extends StatelessWidget {
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
-              image: AssetImage('assets/images/auth1.png'), fit: BoxFit.cover),
+              image: AssetImage('assets/images/auth/auth1.png'), fit: BoxFit.cover),
         ),
         child: Center(
           child: Column(
@@ -70,7 +71,7 @@ class WelcomeScreen extends StatelessWidget {
                       const SizedBox(
                         height: 27,
                       ),
-                      GoogleSignInButton(),
+                      const GoogleSignInButton(),
                       const SizedBox(
                         height: 12,
                       ),
@@ -79,7 +80,7 @@ class WelcomeScreen extends StatelessWidget {
                           Navigator.pushReplacement(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => const SplashScreen1(),
+                              builder: (context) => const LoginScreen(),
                             ),
                           );
                         },
@@ -99,7 +100,7 @@ class WelcomeScreen extends StatelessWidget {
                                 Navigator.pushReplacement(
                                   context,
                                   MaterialPageRoute(
-                                    builder: (context) => const SplashScreen1(),
+                                    builder: (context) => const LoginScreen(),
                                   ),
                                 );
                               },

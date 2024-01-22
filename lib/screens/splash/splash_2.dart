@@ -47,6 +47,7 @@ Dairy Products''',
                 RowIndicator(currentIndex: currentIndex + 1),
                 const SizedBox(height: 32),
                 CustomElevatedButton(
+                  buttonText: 'Get started',
                   onPressedCallback: () {
                     if (_pageController.hasClients) {
                       _pageController.nextPage(

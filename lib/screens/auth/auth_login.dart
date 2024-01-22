@@ -5,6 +5,7 @@ import 'package:grocery/constants/app_icons.dart';
 import 'package:grocery/screens/splash/splash_1.dart';
 
 import '../../components/buttons/auth_button.dart';
+import '../../components/buttons/elevated_button.dart';
 import '../../components/text_field/password_text_field.dart';
 import '../../constants/langs/app_strings.dart';
 import '../../constants/themes/app_theme.dart';
@@ -82,7 +83,8 @@ class LoginScreen extends StatelessWidget {
                       const SizedBox(
                         height: 12,
                       ),
-                      AuthButton(
+                      CustomElevatedButton(
+                        buttonText: 'Login',
                         onPressedCallback: () {
                           Navigator.pushReplacement(
                             context,

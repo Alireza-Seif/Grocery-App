@@ -44,6 +44,7 @@ Quality Fruits''',
                 RowIndicator(currentIndex: currentIndex + 2),  
                 const SizedBox(height: 32),
                 CustomElevatedButton(
+                  buttonText: 'Get started',
                   onPressedCallback: () {
                     if (_pageController.hasClients) {
                       _pageController.nextPage(

@@ -47,6 +47,7 @@ class _SplashScreen1State extends State<SplashScreen1> {
                 RowIndicator(currentIndex: currentIndex),
                 const SizedBox(height: 32),
                 CustomElevatedButton(
+                  buttonText: 'Get started',
                   onPressedCallback: () {
                     if (_pageController.hasClients) {
                       _pageController.nextPage(
