@@ -8,6 +8,8 @@ class AppIcons{
 
   static const vector = '$_path/Vector.svg';
 
+  static const emails = '$_path/Mail.svg';
+
   const AppIcons._();
   
 }

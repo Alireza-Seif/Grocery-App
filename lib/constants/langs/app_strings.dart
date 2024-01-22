@@ -16,5 +16,11 @@ sadipscing elitr, sed diam nonumy''';
   static const forgotPasswordText = '''Lorem ipsum dolor sit amet, consetetur 
 sadipscing elitr, sed diam nonumy''';
 
+//sign in
+  static const signInText = 'Sign in to your account';
+  
+//sign up
+  static const signUpText = 'Quickly create account';
+
 
 }
