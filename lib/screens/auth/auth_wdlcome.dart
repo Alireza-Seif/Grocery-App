@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:grocery/screens/auth/auth_login.dart';
 import 'package:grocery/screens/splash/splash_1.dart';
+import 'package:grocery/widgets/app_bar.dart';
 
 import '../../components/buttons/auth_button.dart';
 import '../../components/buttons/google_button.dart';
@@ -19,33 +20,20 @@ class WelcomeScreen extends StatelessWidget {
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
-              image: AssetImage('assets/images/auth/auth1.png'), fit: BoxFit.cover),
+              image: AssetImage('assets/images/auth/auth1.png'),
+              fit: BoxFit.cover),
         ),
         child: Center(
           child: Column(
             children: [
-              const Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  SizedBox(height: 40),
-                  Row(
-                    children: [
-                      BackButtonWidget(
-                        destinationPage: SplashScreen4(),
-                      ),
-                      SizedBox(
-                        width: 110,
-                      ),
-                      Text(
-                        'Welcome',
-                        style: MyTextStyles.titleStyle2,
-                      )
-                    ],
-                  ),
-                ],
+              CustomAppBar(
+                leading: const BackButtonWidget(
+                  destinationPage: SplashScreen4(),
+                ),
+                titleText: 'Welcome',
               ),
               const SizedBox(
-                height: 400,
+                height: 440,
               ),
               Expanded(
                 child: Container(
@@ -89,7 +77,8 @@ class WelcomeScreen extends StatelessWidget {
                         height: 10,
                       ),
                       Expanded(
-                        child: Row(mainAxisAlignment: MainAxisAlignment.center,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             const Text(
                               'Already have an account ?',
@@ -104,7 +93,8 @@ class WelcomeScreen extends StatelessWidget {
                                   ),
                                 );
                               },
-                              child: const Text('Login',style: MyTextStyles.styleText1),
+                              child: const Text('Login',
+                                  style: MyTextStyles.styleText1),
                             )
                           ],
                         ),

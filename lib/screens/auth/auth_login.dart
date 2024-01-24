@@ -10,6 +10,7 @@ import '../../components/text_field/password_text_field.dart';
 import '../../constants/langs/app_strings.dart';
 import '../../constants/themes/app_theme.dart';
 import '../../constants/themes/colors/app_colors.dart';
+import '../../widgets/app_bar.dart';
 import '../../widgets/back_button.dart';
 import '../splash/splash_4.dart';
 
@@ -28,28 +29,14 @@ class LoginScreen extends StatelessWidget {
         child: Center(
           child: Column(
             children: [
-              const Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  SizedBox(height: 40),
-                  Row(
-                    children: [
-                      BackButtonWidget(
-                        destinationPage: SplashScreen4(),
-                      ),
-                      SizedBox(
-                        width: 110,
-                      ),
-                      Text(
-                        'Welcome',
-                        style: MyTextStyles.titleStyle2,
-                      )
-                    ],
-                  ),
-                ],
+              CustomAppBar(
+                leading: const BackButtonWidget(
+                  destinationPage: SplashScreen4(),
+                ),
+                titleText: 'Welcome',
               ),
               const SizedBox(
-                height: 357,
+                height: 400,
               ),
               Expanded(
                 child: Container(
