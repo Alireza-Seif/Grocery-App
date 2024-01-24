@@ -18,6 +18,7 @@ class _PasswordFieldState extends State<PasswordField> {
       decoration: InputDecoration(
         filled: true,
         fillColor: Colors.white,
+        label: const Text('Password'),
         prefixIcon: const Padding(
           padding: EdgeInsets.only(right: 20, left: 20),
           child: Icon(
