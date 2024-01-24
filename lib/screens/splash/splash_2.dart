@@ -4,6 +4,7 @@ import '../../components/buttons/elevated_button.dart';
 import '../../constants/langs/app_strings.dart';
 import '../../constants/themes/app_theme.dart';
 import '../../widgets/row_indicator.dart';
+import '../auth/auth_wdlcome.dart';
 
 class SplashScreen2 extends StatefulWidget {
   const SplashScreen2({super.key});
@@ -49,12 +50,12 @@ Dairy Products''',
                 CustomElevatedButton(
                   buttonText: 'Get started',
                   onPressedCallback: () {
-                    if (_pageController.hasClients) {
-                      _pageController.nextPage(
-                        duration: const Duration(milliseconds: 500),
-                        curve: Curves.ease,
-                      );
-                    }
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const WelcomeScreen(),
+                      ),
+                    );
                   },
                 )
               ],

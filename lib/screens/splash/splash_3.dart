@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grocery/screens/auth/auth_wdlcome.dart';
 import '../../components/buttons/elevated_button.dart';
 import '../../constants/langs/app_strings.dart';
 import '../../constants/themes/app_theme.dart';
@@ -46,12 +47,12 @@ Quality Fruits''',
                 CustomElevatedButton(
                   buttonText: 'Get started',
                   onPressedCallback: () {
-                    if (_pageController.hasClients) {
-                      _pageController.nextPage(
-                        duration: const Duration(milliseconds: 500),
-                        curve: Curves.ease,
-                      );
-                    }
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const WelcomeScreen(),
+                      ),
+                    );
                   },
                 ),
               ],

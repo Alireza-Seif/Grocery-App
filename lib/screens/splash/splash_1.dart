@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:grocery/components/buttons/elevated_button.dart';
 import 'package:grocery/constants/langs/app_strings.dart';
+import 'package:grocery/screens/auth/auth_wdlcome.dart';
 
 import '../../constants/themes/app_theme.dart';
 import '../../widgets/row_indicator.dart';
@@ -49,12 +50,12 @@ class _SplashScreen1State extends State<SplashScreen1> {
                 CustomElevatedButton(
                   buttonText: 'Get started',
                   onPressedCallback: () {
-                    if (_pageController.hasClients) {
-                      _pageController.nextPage(
-                        duration: const Duration(milliseconds: 500),
-                        curve: Curves.ease,
-                      );
-                    }
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const WelcomeScreen(),
+                      ),
+                    );
                   },
                 ),
               ],

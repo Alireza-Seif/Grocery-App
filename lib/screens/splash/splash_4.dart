@@ -52,7 +52,8 @@ On All Products''',
                     Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
-                          builder: (context) => const WelcomeScreen()),
+                        builder: (context) => const WelcomeScreen(),
+                      ),
                     );
                   },
                 ),

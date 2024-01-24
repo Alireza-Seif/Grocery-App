@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:grocery/screens/auth/auth_wdlcome.dart';
-import 'package:grocery/screens/splash/splash_1.dart';
+
+
+import 'screens/intro_slider.dart';
 
 
 
@@ -9,7 +10,7 @@ void main() {
     const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      home: SplashScreen1(),
+      home: IntroSliderPage(),
     ),
   );
 }
@@ -19,10 +20,8 @@ class HomPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Home Page'),
-      ),
+    return const Scaffold(
+      body: IntroSliderPage(),
     );
   }
 }
