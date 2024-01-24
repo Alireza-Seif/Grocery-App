@@ -16,7 +16,7 @@ CustomAppBar({
             style: MyTextStyles.titleStyle2
           ),
           leading: leading,
-          elevation: 4.0,
+          elevation: 15,
           centerTitle: true,
           backgroundColor: Colors.transparent
         );

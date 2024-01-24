@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:grocery/components/icon/icon_view.dart';
 import 'package:grocery/components/text_field/email_text_field.dart';
 import 'package:grocery/constants/app_icons.dart';
+import 'package:grocery/screens/auth/auth_wdlcome.dart';
 import 'package:grocery/screens/splash/splash_1.dart';
 
 import '../../components/buttons/auth_button.dart';
@@ -31,7 +32,7 @@ class LoginScreen extends StatelessWidget {
             children: [
               CustomAppBar(
                 leading: const BackButtonWidget(
-                  destinationPage: SplashScreen4(),
+                  destinationPage: WelcomeScreen(),
                 ),
                 titleText: 'Welcome',
               ),
