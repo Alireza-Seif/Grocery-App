@@ -13,7 +13,7 @@ class SplashScreen3 extends StatefulWidget {
 }
 
 class _SplashScreen3State extends State<SplashScreen3> {
-   final PageController _pageController = PageController();
+   
   int currentIndex = 0;
 
   @override

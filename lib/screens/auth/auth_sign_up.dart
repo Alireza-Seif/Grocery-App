@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:grocery/components/text_field/email_text_field.dart';
 import 'package:grocery/components/text_field/password_text_field.dart';
+import 'package:grocery/components/text_field/phone_text_field.dart';
+import 'package:grocery/constants/langs/app_strings.dart';
+import 'package:grocery/constants/themes/colors/app_colors.dart';
 import 'package:grocery/main.dart';
-import 'package:grocery/screens/auth/auth_sign_up.dart';
+import 'package:grocery/screens/auth/auth_login.dart';
+import 'package:grocery/screens/auth/auth_wdlcome.dart';
+import 'package:grocery/widgets/app_bar.dart';
+import 'package:grocery/widgets/back_button.dart';
 
 import '../../components/buttons/elevated_button.dart';
-import '../../constants/langs/app_strings.dart';
 import '../../constants/themes/app_theme.dart';
-import '../../constants/themes/colors/app_colors.dart';
-import '../../widgets/app_bar.dart';
-import '../../widgets/back_button.dart';
-import '../../widgets/row_auth_password.dart';
-import 'auth_wdlcome.dart';
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+class SignUpScreen extends StatelessWidget {
+  const SignUpScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +29,7 @@ class LoginScreen extends StatelessWidget {
         body: Container(
           decoration: const BoxDecoration(
             image: DecorationImage(
-              image: AssetImage('assets/images/auth/auth2.png'),
+              image: AssetImage('assets/images/auth/auth3.png'),
               fit: BoxFit.cover,
             ),
           ),
@@ -59,11 +59,11 @@ class LoginScreen extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
                         const Text(
-                          'Welcome back !',
+                          'Create account',
                           style: MyTextStyles.titleStyle3,
                         ),
                         const Text(
-                          AppString.signInText,
+                          AppString.signUpText,
                           style: MyTextStyles.bodyText,
                         ),
                         const SizedBox(
@@ -73,16 +73,19 @@ class LoginScreen extends StatelessWidget {
                         const SizedBox(
                           height: 5,
                         ),
+                        const PhoneTextField(),
+                        const SizedBox(
+                          height: 5,
+                        ),
                         const PasswordField(),
                         const SizedBox(
                           height: 9,
                         ),
-                        const RowRemember(),
                         const SizedBox(
                           height: 9,
                         ),
                         CustomElevatedButton(
-                          buttonText: 'Login',
+                          buttonText: 'Signup',
                           onPressedCallback: () {
                             Navigator.pushReplacement(
                               context,
@@ -100,7 +103,7 @@ class LoginScreen extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               const Text(
-                                'Don\'t have an account ?',
+                                'Already have an account ?',
                                 style: MyTextStyles.bodyText,
                               ),
                               TextButton(
@@ -108,13 +111,12 @@ class LoginScreen extends StatelessWidget {
                                   Navigator.pushReplacement(
                                     context,
                                     MaterialPageRoute(
-                                      builder: (context) =>
-                                          const SignUpScreen(),
+                                      builder: (context) => const LoginScreen(),
                                     ),
                                   );
                                 },
                                 child: const Text(
-                                  'Sign up',
+                                  'Login',
                                   style: MyTextStyles.styleText1,
                                 ),
                               ),

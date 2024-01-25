@@ -14,7 +14,7 @@ class SplashScreen2 extends StatefulWidget {
 }
 
 class _SplashScreen2State extends State<SplashScreen2> {
-  final PageController _pageController = PageController();
+  
   int currentIndex = 0;
 
   @override
