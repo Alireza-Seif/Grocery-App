@@ -10,6 +10,7 @@ import '../../constants/themes/app_theme.dart';
 import '../../constants/themes/colors/app_colors.dart';
 import '../../widgets/app_bar.dart';
 import '../../widgets/back_button.dart';
+import '../../widgets/row_auth_password.dart';
 import 'auth_wdlcome.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -42,11 +43,11 @@ class LoginScreen extends StatelessWidget {
                   titleText: 'Welcome',
                 ),
                 const SizedBox(
-                  height: 370,
+                  height: 350,
                 ),
                 Expanded(
                   child: Container(
-                    padding: const EdgeInsets.fromLTRB(16, 30, 16, 20),
+                    padding: const EdgeInsets.fromLTRB(16, 20, 16, 10),
                     decoration: const BoxDecoration(
                       color: AppColors.background2,
                       borderRadius: BorderRadius.only(
@@ -66,7 +67,7 @@ class LoginScreen extends StatelessWidget {
                           style: MyTextStyles.bodyText,
                         ),
                         const SizedBox(
-                          height: 27,
+                          height: 26,
                         ),
                         const EmailTextField(),
                         const SizedBox(
@@ -74,7 +75,11 @@ class LoginScreen extends StatelessWidget {
                         ),
                         const PasswordField(),
                         const SizedBox(
-                          height: 12,
+                          height: 9,
+                        ),
+                        const RowRemember(),
+                        const SizedBox(
+                          height: 9,
                         ),
                         CustomElevatedButton(
                           buttonText: 'Login',
@@ -103,7 +108,8 @@ class LoginScreen extends StatelessWidget {
                                   Navigator.pushReplacement(
                                     context,
                                     MaterialPageRoute(
-                                      builder: (context) =>  const SignUpScreen(),
+                                      builder: (context) =>
+                                          const SignUpScreen(),
                                     ),
                                   );
                                 },
