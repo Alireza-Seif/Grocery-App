@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../widgets/home_widgets/search_bar.dart';
+
 class HomPage extends StatefulWidget {
   const HomPage({super.key});
 
@@ -11,10 +13,19 @@ class _HomPageState extends State<HomPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
-          child: Container(color: Colors.white,
-        child: const Column(children: [],),
-      )),
+      body: SafeArea(
+        child: SingleChildScrollView(
+            child: Container(
+          color: Colors.white,
+          child: const Center(
+            child: Column(
+              children: [
+                MySearchBar(),
+              ],
+            ),
+          ),
+        )),
+      ),
     );
   }
 }
