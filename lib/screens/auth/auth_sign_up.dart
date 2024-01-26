@@ -4,14 +4,14 @@ import 'package:grocery/components/text_field/password_text_field.dart';
 import 'package:grocery/components/text_field/phone_text_field.dart';
 import 'package:grocery/constants/langs/app_strings.dart';
 import 'package:grocery/constants/themes/colors/app_colors.dart';
-import 'package:grocery/main.dart';
 import 'package:grocery/screens/auth/auth_login.dart';
 import 'package:grocery/screens/auth/auth_wdlcome.dart';
-import 'package:grocery/widgets/app_bar.dart';
-import 'package:grocery/widgets/back_button.dart';
+import 'package:grocery/widgets/auth_widgets/app_bar.dart';
+import 'package:grocery/widgets/auth_widgets/back_button.dart';
 
 import '../../components/buttons/elevated_button.dart';
 import '../../constants/themes/app_theme.dart';
+import '../home_page.dart';
 
 class SignUpScreen extends StatelessWidget {
   const SignUpScreen({super.key});

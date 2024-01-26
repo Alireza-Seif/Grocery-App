@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 
-import 'screens/intro_slider.dart';
+import 'screens/home_page.dart';
 
 
 
@@ -10,18 +10,7 @@ void main() {
     const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      home: IntroSliderPage(),
+      home: HomPage(),
     ),
   );
-}
-
-class HomPage extends StatelessWidget {
-  const HomPage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Scaffold(
-      body: IntroSliderPage(),
-    );
-  }
 }

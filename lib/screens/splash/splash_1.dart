@@ -4,7 +4,7 @@ import 'package:grocery/constants/langs/app_strings.dart';
 import 'package:grocery/screens/auth/auth_wdlcome.dart';
 
 import '../../constants/themes/app_theme.dart';
-import '../../widgets/row_indicator.dart';
+import '../../widgets/auth_widgets/row_indicator.dart';
 
 class SplashScreen1 extends StatefulWidget {
   const SplashScreen1({super.key});

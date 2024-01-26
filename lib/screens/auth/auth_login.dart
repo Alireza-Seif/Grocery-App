@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:grocery/components/text_field/email_text_field.dart';
 import 'package:grocery/components/text_field/password_text_field.dart';
-import 'package:grocery/main.dart';
 import 'package:grocery/screens/auth/auth_sign_up.dart';
 
 import '../../components/buttons/elevated_button.dart';
 import '../../constants/langs/app_strings.dart';
 import '../../constants/themes/app_theme.dart';
 import '../../constants/themes/colors/app_colors.dart';
-import '../../widgets/app_bar.dart';
-import '../../widgets/back_button.dart';
-import '../../widgets/row_auth_password.dart';
+import '../../widgets/auth_widgets/app_bar.dart';
+import '../../widgets/auth_widgets/back_button.dart';
+import '../../widgets/auth_widgets/row_auth_password.dart';
+import '../home_page.dart';
 import 'auth_wdlcome.dart';
 
 class LoginScreen extends StatelessWidget {

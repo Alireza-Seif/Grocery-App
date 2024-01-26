@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../../components/buttons/elevated_button.dart';
 import '../../constants/langs/app_strings.dart';
 import '../../constants/themes/app_theme.dart';
-import '../../widgets/row_indicator.dart';
+import '../../widgets/auth_widgets/row_indicator.dart';
 import '../auth/auth_wdlcome.dart';
 
 class SplashScreen2 extends StatefulWidget {

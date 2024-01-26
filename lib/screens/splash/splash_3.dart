@@ -3,7 +3,7 @@ import 'package:grocery/screens/auth/auth_wdlcome.dart';
 import '../../components/buttons/elevated_button.dart';
 import '../../constants/langs/app_strings.dart';
 import '../../constants/themes/app_theme.dart';
-import '../../widgets/row_indicator.dart';
+import '../../widgets/auth_widgets/row_indicator.dart';
 
 class SplashScreen3 extends StatefulWidget {
   const SplashScreen3({super.key});
