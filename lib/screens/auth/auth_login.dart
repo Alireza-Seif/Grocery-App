@@ -4,6 +4,7 @@ import 'package:grocery/components/text_field/password_text_field.dart';
 import 'package:grocery/screens/auth/auth_sign_up.dart';
 
 import '../../components/buttons/elevated_button.dart';
+import '../../constants/image_strings.dart';
 import '../../constants/langs/app_strings.dart';
 import '../../constants/themes/app_theme.dart';
 import '../../constants/themes/colors/app_colors.dart';
@@ -27,9 +28,9 @@ class LoginScreen extends StatelessWidget {
       ),
       child: Scaffold(
         body: Container(
-          decoration: const BoxDecoration(
+          decoration:  BoxDecoration(
             image: DecorationImage(
-              image: AssetImage('assets/images/auth/auth2.png'),
+              image: AssetImage(MyImages.auth2),
               fit: BoxFit.cover,
             ),
           ),

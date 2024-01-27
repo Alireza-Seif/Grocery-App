@@ -4,6 +4,7 @@ import 'package:grocery/widgets/auth_widgets/app_bar.dart';
 
 import '../../components/buttons/auth_button.dart';
 import '../../components/buttons/google_button.dart';
+import '../../constants/image_strings.dart';
 import '../../constants/langs/app_strings.dart';
 import '../../constants/themes/app_theme.dart';
 import '../../constants/themes/colors/app_colors.dart';
@@ -24,9 +25,9 @@ class WelcomeScreen extends StatelessWidget {
       ),
       child: Scaffold(
         body: Container(
-          decoration: const BoxDecoration(
+          decoration:  BoxDecoration(
             image: DecorationImage(
-              image: AssetImage('assets/images/auth/auth1.png'),
+              image: AssetImage(MyImages.auth1),
               fit: BoxFit.cover,
             ),
           ),

@@ -3,6 +3,7 @@ import 'package:grocery/components/buttons/elevated_button.dart';
 import 'package:grocery/constants/langs/app_strings.dart';
 import 'package:grocery/screens/auth/auth_wdlcome.dart';
 
+import '../../constants/image_strings.dart';
 import '../../constants/themes/app_theme.dart';
 import '../../widgets/auth_widgets/row_indicator.dart';
 
@@ -23,9 +24,9 @@ class _SplashScreen1State extends State<SplashScreen1> {
       body: SafeArea(
         child: Container(
           padding: const EdgeInsets.fromLTRB(0, 59, 0, 0),
-          decoration: const BoxDecoration(
+          decoration:  BoxDecoration(
             image: DecorationImage(
-                image: AssetImage('assets/images/splash/splash1.png'),
+                image: AssetImage(MyImages.splash1),
                 fit: BoxFit.cover),
           ),
           child: Center(
@@ -36,8 +37,8 @@ class _SplashScreen1State extends State<SplashScreen1> {
                   'Welcome to',
                   style: MyTextStyles.titleStyle1,
                 ),
-                const Image(
-                  image: AssetImage('assets/images/bigCart1.png'),
+                 Image(
+                  image: AssetImage(MyImages.bigCart),
                 ),
                 const SizedBox(height: 14),
                 const Text(

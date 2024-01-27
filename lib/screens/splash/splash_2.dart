@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../components/buttons/elevated_button.dart';
+import '../../constants/image_strings.dart';
 import '../../constants/langs/app_strings.dart';
 import '../../constants/themes/app_theme.dart';
 import '../../widgets/auth_widgets/row_indicator.dart';
@@ -22,10 +23,10 @@ class _SplashScreen2State extends State<SplashScreen2> {
     return Scaffold(
       body: SafeArea(
         child: Container(
-          padding: const EdgeInsets.fromLTRB(0, 59, 0, 0),
-          decoration: const BoxDecoration(
+          padding:  const EdgeInsets.fromLTRB(0, 59, 0, 0),
+          decoration:  BoxDecoration(
             image: DecorationImage(
-                image: AssetImage('assets/images/splash/splash2.png'),
+                image: AssetImage(MyImages.splash2),
                 fit: BoxFit.cover),
           ),
           child: Center(

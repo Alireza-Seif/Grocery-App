@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grocery/constants/image_strings.dart';
 
 import '../widgets/home_widgets/search_bar.dart';
 
@@ -17,10 +18,15 @@ class _HomPageState extends State<HomPage> {
         child: SingleChildScrollView(
             child: Container(
           color: Colors.white,
-          child: const Center(
+          child: Center(
             child: Column(
               children: [
-                MySearchBar(),
+                const MySearchBar(),
+                Container(
+                  decoration:
+                      BoxDecoration(borderRadius: BorderRadius.circular(20)),
+                  child: Image(image: AssetImage(MyImages.promoBanner1)),
+                )
               ],
             ),
           ),

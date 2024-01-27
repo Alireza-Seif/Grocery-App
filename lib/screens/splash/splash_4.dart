@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../components/buttons/elevated_button.dart';
+import '../../constants/image_strings.dart';
 import '../../constants/langs/app_strings.dart';
 import '../../constants/themes/app_theme.dart';
 import '../../widgets/auth_widgets/row_indicator.dart';
@@ -22,9 +23,9 @@ class _SplashScreen4State extends State<SplashScreen4> {
       body: SafeArea(
         child: Container(
           padding: const EdgeInsets.fromLTRB(0, 59, 0, 0),
-          decoration: const BoxDecoration(
+          decoration:  BoxDecoration(
             image: DecorationImage(
-                image: AssetImage('assets/images/splash/splash4.png'),
+                image: AssetImage(MyImages.splash4),
                 fit: BoxFit.cover),
           ),
           child: Center(

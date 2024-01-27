@@ -10,6 +10,7 @@ import 'package:grocery/widgets/auth_widgets/app_bar.dart';
 import 'package:grocery/widgets/auth_widgets/back_button.dart';
 
 import '../../components/buttons/elevated_button.dart';
+import '../../constants/image_strings.dart';
 import '../../constants/themes/app_theme.dart';
 import '../home_page.dart';
 
@@ -27,9 +28,9 @@ class SignUpScreen extends StatelessWidget {
       ),
       child: Scaffold(
         body: Container(
-          decoration: const BoxDecoration(
+          decoration:  BoxDecoration(
             image: DecorationImage(
-              image: AssetImage('assets/images/auth/auth3.png'),
+              image: AssetImage(MyImages.auth3),
               fit: BoxFit.cover,
             ),
           ),
