@@ -16,7 +16,7 @@ class _MySearchBarState extends State<MySearchBar> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.fromLTRB(20, 20, 20, 20),
+      padding: const EdgeInsets.fromLTRB(0, 20, 0, 20),
       child: TextField(
         controller: _searchController,
         decoration: InputDecoration(

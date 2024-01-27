@@ -16,4 +16,7 @@ static String splash4 = 'assets/images/splash/splash4.png';
 
 // Banners
 static String promoBanner1 = 'assets/images/banners/promo_banner_1.png';
+static String promoBanner2 = 'assets/images/banners/promo_banner_2.webp';
+static String promoBanner3 = 'assets/images/banners/promo_banner_3.jpg';
+static String promoBanner4 = 'assets/images/banners/promo_banner_4.jpg';
 }
