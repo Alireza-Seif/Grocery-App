@@ -1,6 +1,8 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:grocery/constants/image_strings.dart';
+import 'package:grocery/widgets/home_widgets/promo_slider.dart';
+import 'package:grocery/widgets/images/my_circular_container.dart';
 
 import '../widgets/home_widgets/search_bar.dart';
 import '../widgets/images/my_rounded_image.dart';
@@ -21,29 +23,11 @@ class _HomPageState extends State<HomPage> {
             child: Container(
           padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
           color: Colors.white,
-          child: Center(
+          child: const Center(
             child: Column(
               children: [
-                const MySearchBar(),
-                Column(
-                  children: [
-                    CarouselSlider(
-                        items: [
-                          MyRoundedImage(
-                            imageUrl: MyImages.promoBanner1,
-                          ),MyRoundedImage(
-                            imageUrl: MyImages.promoBanner2,
-                          ),MyRoundedImage(
-                            imageUrl: MyImages.promoBanner3,
-                          ),MyRoundedImage(
-                            imageUrl: MyImages.promoBanner4,
-                          ),
-                        ],
-                        options: CarouselOptions(
-                          viewportFraction: 1,
-                        )),
-                  ],
-                )
+                MySearchBar(),
+                MyPromoSlider(),
               ],
             ),
           ),
