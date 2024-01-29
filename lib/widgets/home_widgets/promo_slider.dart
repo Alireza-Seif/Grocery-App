@@ -1,6 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:grocery/constants/image_strings.dart';
+import 'package:grocery/constants/themes/app_theme.dart';
 import 'package:grocery/widgets/images/my_rounded_image.dart';
 import 'package:get/get.dart';
 
@@ -19,7 +20,7 @@ class _MyPromoSliderState extends State<MyPromoSlider> {
   Widget build(BuildContext context) {
     final controller = Get.put(HomeController());
 
-    return Column(
+    return Stack(
       children: [
         CarouselSlider(
           items: [
@@ -41,19 +42,32 @@ class _MyPromoSliderState extends State<MyPromoSlider> {
             onPageChanged: (index, _) => controller.updatePageIndicator(index),
           ),
         ),
-        Obx(
-          () => Row(
-            children: [
-              for (int i = 0; i < 4; i++)
-                MyCircularContainer(
-                  width: 30,
-                  height: 30,
-                  margin: const EdgeInsets.only(right: 6),
-                  backgorundColor: controller.carousalCurrentIndex.value == i
-                      ? AppColors.primary
-                      : Colors.black,
-                ),
-            ],
+        const Positioned(
+          bottom: 50,
+          left: 43,
+          right: 0,
+            child: Text(
+          '20% of on your\nfirst purchase',
+          style: MyTextStyles.styleBanner,
+        )),
+        Positioned(
+          bottom: 22,
+          left: 17,
+          right: 0,
+          child: Obx(
+            () => Row(
+              children: [
+                for (int i = 0; i < 4; i++)
+                  MyCircularContainer(
+                    width: controller.carousalCurrentIndex.value == i ? 24 : 6,
+                    height: 6,
+                    margin: const EdgeInsets.only(right: 6),
+                    backgorundColor: controller.carousalCurrentIndex.value == i
+                        ? AppColors.primaryDark
+                        : Colors.white,
+                  ),
+              ],
+            ),
           ),
         ),
       ],

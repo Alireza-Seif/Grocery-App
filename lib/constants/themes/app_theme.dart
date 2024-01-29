@@ -4,10 +4,7 @@ import 'colors/app_colors.dart';
 
 class MyTextStyles {
   static const TextStyle titleStyle1 = TextStyle(
-    fontWeight: FontWeight.w700,
-    fontSize: 30,
-    fontFamily: 'Poppins'
-  );
+      fontWeight: FontWeight.w700, fontSize: 30, fontFamily: 'Poppins');
 
   static const TextStyle bodyText = TextStyle(
     fontSize: 15,
@@ -23,15 +20,19 @@ class MyTextStyles {
   );
 
   static const TextStyle titleStyle3 = TextStyle(
-    fontWeight: FontWeight.w600,
-    fontSize: 25,
-    fontFamily: 'Poppins'
-  );
+      fontWeight: FontWeight.w600, fontSize: 25, fontFamily: 'Poppins');
 
   static const TextStyle styleText1 = TextStyle(
-                  color: Colors.black,
-                  fontSize: 15.0,
-                  fontFamily: 'Poppins',
-                  fontWeight: FontWeight.w600,
-                );
+    color: Colors.black,
+    fontSize: 15.0,
+    fontFamily: 'Poppins',
+    fontWeight: FontWeight.w600,
+  );
+
+  static const TextStyle styleBanner = TextStyle(
+    color: Colors.black,
+    fontSize: 18.0,
+    fontFamily: 'Poppins',
+    fontWeight: FontWeight.w600,
+  );
 }
