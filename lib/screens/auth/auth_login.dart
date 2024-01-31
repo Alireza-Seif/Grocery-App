@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:grocery/components/text_field/email_text_field.dart';
 import 'package:grocery/components/text_field/password_text_field.dart';
@@ -24,17 +25,19 @@ class LoginScreen extends StatelessWidget {
         inputDecorationTheme: const InputDecorationTheme(
           contentPadding: EdgeInsets.all(16.0),
         ),
-        // Add other theme configurations as needed
       ),
       child: Scaffold(
-        body: Container(
-          decoration:  BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage(MyImages.auth2),
-              fit: BoxFit.cover,
+        body: SingleChildScrollView(
+          child: Container(
+            height: MediaQuery.of(context).size.height ,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage(
+                  MyImages.auth2,
+                ),
+                fit: BoxFit.cover,
+              ),
             ),
-          ),
-          child: Center(
             child: Column(
               children: [
                 CustomAppBar(
@@ -44,68 +47,71 @@ class LoginScreen extends StatelessWidget {
                   titleText: 'Welcome',
                 ),
                 const SizedBox(
-                  height: 350,
+                  height: 390,
                 ),
-                Expanded(
-                  child: Container(
-                    padding: const EdgeInsets.fromLTRB(16, 20, 16, 10),
-                    decoration: const BoxDecoration(
-                      color: AppColors.background2,
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(10),
-                        topRight: Radius.circular(10),
-                      ),
+                Container(
+                  padding: const EdgeInsets.fromLTRB(16, 20, 16, 10),
+                  decoration: const BoxDecoration(
+                    color: AppColors.background2,
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(10),
+                      topRight: Radius.circular(10),
                     ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.stretch,
-                      children: [
-                        const Text(
-                          'Welcome back !',
-                          style: MyTextStyles.titleStyle3,
-                        ),
-                        const Text(
-                          AppString.signInText,
-                          style: MyTextStyles.bodyText,
-                        ),
-                        const SizedBox(
-                          height: 26,
-                        ),
-                        const EmailTextField(),
-                        const SizedBox(
-                          height: 5,
-                        ),
-                        const PasswordField(),
-                        const SizedBox(
-                          height: 9,
-                        ),
-                        const RowRemember(),
-                        const SizedBox(
-                          height: 9,
-                        ),
-                        CustomElevatedButton(
-                          buttonText: 'Login',
-                          onPressedCallback: () {
-                            Navigator.pushReplacement(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => const HomPage(),
-                              ),
-                            );
-                          },
-                        ),
-                        const SizedBox(
-                          height: 10,
-                        ),
-                        Expanded(
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              const Text(
-                                'Don\'t have an account ?',
-                                style: MyTextStyles.bodyText,
-                              ),
-                              TextButton(
-                                onPressed: () {
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      const Text(
+                        'Welcome back !',
+                        style: MyTextStyles.titleStyle3,
+                      ),
+                      const Text(
+                        AppString.signInText,
+                        style: MyTextStyles.bodyText,
+                      ),
+                      const SizedBox(
+                        height: 26,
+                      ),
+                      const EmailTextField(),
+                      const SizedBox(
+                        height: 5,
+                      ),
+                      const PasswordField(),
+                      const SizedBox(
+                        height: 9,
+                      ),
+                      const RowRemember(),
+                      const SizedBox(
+                        height: 9,
+                      ),
+                      CustomElevatedButton(
+                        buttonText: 'Login',
+                        onPressedCallback: () {
+                          Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const HomPage(),
+                            ),
+                          );
+                        },
+                      ),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          RichText(
+                            text:  TextSpan(
+                              children: [
+                               const TextSpan(
+                                  text: 'Don\'t have an account ? ',
+                                  style: MyTextStyles.bodyText,
+                                ),
+                                TextSpan(
+                              text: 'Sign up',
+                              style: MyTextStyles.styleText1,
+                              recognizer: TapGestureRecognizer()..onTap = () {
                                   Navigator.pushReplacement(
                                     context,
                                     MaterialPageRoute(
@@ -114,16 +120,14 @@ class LoginScreen extends StatelessWidget {
                                     ),
                                   );
                                 },
-                                child: const Text(
-                                  'Sign up',
-                                  style: MyTextStyles.styleText1,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
+                            ),
+                         
+                              ],
+                            ),
+                             ),
+                        ],
+                      ),
+                    ],
                   ),
                 ),
               ],

@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:grocery/components/text_field/email_text_field.dart';
 import 'package:grocery/components/text_field/password_text_field.dart';
@@ -27,27 +28,27 @@ class SignUpScreen extends StatelessWidget {
         // Add other theme configurations as needed
       ),
       child: Scaffold(
-        body: Container(
-          decoration:  BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage(MyImages.auth3),
-              fit: BoxFit.cover,
+        body: SingleChildScrollView(
+          child: Container(
+            decoration:  BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage(MyImages.auth3),
+                fit: BoxFit.cover,
+              ),
             ),
-          ),
-          child: Center(
-            child: Column(
-              children: [
-                CustomAppBar(
-                  leading: const BackButtonWidget(
-                    destinationPage: WelcomeScreen(),
+            child: Center(
+              child: Column(
+                children: [
+                  CustomAppBar(
+                    leading: const BackButtonWidget(
+                      destinationPage: WelcomeScreen(),
+                    ),
+                    titleText: 'Welcome',
                   ),
-                  titleText: 'Welcome',
-                ),
-                const SizedBox(
-                  height: 350,
-                ),
-                Expanded(
-                  child: Container(
+                  const SizedBox(
+                    height: 350,
+                  ),
+                  Container(
                     padding: const EdgeInsets.fromLTRB(16, 20, 16, 10),
                     decoration: const BoxDecoration(
                       color: AppColors.background2,
@@ -99,36 +100,40 @@ class SignUpScreen extends StatelessWidget {
                         const SizedBox(
                           height: 10,
                         ),
-                        Expanded(
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              const Text(
-                                'Already have an account ?',
-                                style: MyTextStyles.bodyText,
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            RichText(
+                              text: TextSpan(
+                                children: [
+                                  const TextSpan(
+                                    text: 'Already have an account ? ',
+                                    style: MyTextStyles.bodyText,
+                                  ),
+                                  TextSpan(
+                                    text: 'Login',
+                                    style: MyTextStyles.styleText1,
+                                    recognizer: TapGestureRecognizer()
+                                      ..onTap = () {
+                                        Navigator.pushReplacement(
+                                          context,
+                                          MaterialPageRoute(
+                                            builder: (context) =>
+                                                const LoginScreen(),
+                                          ),
+                                        );
+                                      },
+                                  ),
+                                ],
                               ),
-                              TextButton(
-                                onPressed: () {
-                                  Navigator.pushReplacement(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) => const LoginScreen(),
-                                    ),
-                                  );
-                                },
-                                child: const Text(
-                                  'Login',
-                                  style: MyTextStyles.styleText1,
-                                ),
-                              ),
-                            ],
-                          ),
+                            ),
+                          ],
                         ),
                       ],
                     ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
         ),
