@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:grocery/components/text_field/email_text_field.dart';
 import 'package:grocery/components/text_field/password_text_field.dart';
 import 'package:grocery/screens/auth/auth_sign_up.dart';
+import 'package:grocery/widgets/auth_widgets/up_ide.dart';
 
 import '../../components/buttons/elevated_button.dart';
 import '../../constants/image_strings.dart';
@@ -28,110 +29,92 @@ class LoginScreen extends StatelessWidget {
       ),
       child: Scaffold(
         body: SingleChildScrollView(
-          child: Container(
-            height: MediaQuery.of(context).size.height ,
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage(
-                  MyImages.auth2,
-                ),
-                fit: BoxFit.cover,
-              ),
-            ),
-            child: Column(
-              children: [
-                CustomAppBar(
-                  leading: const BackButtonWidget(
-                    destinationPage: WelcomeScreen(),
+          child: Stack(
+            children: [
+              UpSide(imgAsset: MyImages.auth2),
+              Container(
+                margin: const EdgeInsets.only(top:450),
+                padding: const EdgeInsets.fromLTRB(16, 30, 16, 10),
+                decoration: const BoxDecoration(
+                  color: AppColors.background2,
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(10),
+                    topRight: Radius.circular(10),
                   ),
-                  titleText: 'Welcome',
                 ),
-                const SizedBox(
-                  height: 390,
-                ),
-                Container(
-                  padding: const EdgeInsets.fromLTRB(16, 20, 16, 10),
-                  decoration: const BoxDecoration(
-                    color: AppColors.background2,
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(10),
-                      topRight: Radius.circular(10),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    const Text(
+                      'Welcome back !',
+                      style: MyTextStyles.titleStyle3,
                     ),
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: [
-                      const Text(
-                        'Welcome back !',
-                        style: MyTextStyles.titleStyle3,
-                      ),
-                      const Text(
-                        AppString.signInText,
-                        style: MyTextStyles.bodyText,
-                      ),
-                      const SizedBox(
-                        height: 26,
-                      ),
-                      const EmailTextField(),
-                      const SizedBox(
-                        height: 5,
-                      ),
-                      const PasswordField(),
-                      const SizedBox(
-                        height: 9,
-                      ),
-                      const RowRemember(),
-                      const SizedBox(
-                        height: 9,
-                      ),
-                      CustomElevatedButton(
-                        buttonText: 'Login',
-                        onPressedCallback: () {
-                          Navigator.pushReplacement(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => const HomPage(),
-                            ),
-                          );
-                        },
-                      ),
-                      const SizedBox(
-                        height: 10,
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          RichText(
-                            text:  TextSpan(
-                              children: [
-                               const TextSpan(
-                                  text: 'Don\'t have an account ? ',
-                                  style: MyTextStyles.bodyText,
-                                ),
-                                TextSpan(
-                              text: 'Sign up',
-                              style: MyTextStyles.styleText1,
-                              recognizer: TapGestureRecognizer()..onTap = () {
-                                  Navigator.pushReplacement(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) =>
-                                          const SignUpScreen(),
-                                    ),
-                                  );
-                                },
-                            ),
-                         
-                              ],
-                            ),
-                             ),
-                        ],
-                      ),
-                    ],
-                  ),
+                    const Text(
+                      AppString.signInText,
+                      style: MyTextStyles.bodyText,
+                    ),
+                    const SizedBox(
+                      height: 26,
+                    ),
+                    const EmailTextField(),
+                    const SizedBox(
+                      height: 5,
+                    ),
+                    const PasswordField(),
+                    const SizedBox(
+                      height: 9,
+                    ),
+                    const RowRemember(),
+                    const SizedBox(
+                      height: 9,
+                    ),
+                    CustomElevatedButton(
+                      buttonText: 'Login',
+                      onPressedCallback: () {
+                        Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const HomPage(),
+                          ),
+                        );
+                      },
+                    ),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        RichText(
+                          text: TextSpan(
+                            children: [
+                              const TextSpan(
+                                text: 'Don\'t have an account ? ',
+                                style: MyTextStyles.bodyText,
+                              ),
+                              TextSpan(
+                                text: 'Sign up',
+                                style: MyTextStyles.styleText1,
+                                recognizer: TapGestureRecognizer()
+                                  ..onTap = () {
+                                    Navigator.pushReplacement(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) =>
+                                            const SignUpScreen(),
+                                      ),
+                                    );
+                                  },
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),SizedBox(height: 20,)
+                  ],
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       ),
