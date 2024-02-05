@@ -2,6 +2,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:grocery/screens/auth/auth_login.dart';
 import 'package:grocery/widgets/auth_widgets/app_bar.dart';
+import 'package:grocery/widgets/auth_widgets/up_ide.dart';
 
 import '../../components/buttons/auth_button.dart';
 import '../../components/buttons/google_button.dart';
@@ -22,102 +23,92 @@ class WelcomeScreen extends StatelessWidget {
         inputDecorationTheme: const InputDecorationTheme(
           contentPadding: EdgeInsets.all(16.0),
         ),
-        // Add other theme configurations as needed
       ),
       child: Scaffold(
-        body: Container(
-          decoration: BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage(MyImages.auth1),
-              fit: BoxFit.cover,
-            ),
-          ),
-          child: Center(
-            child: Column(
-              children: [
-                CustomAppBar(
-                  leading: const BackButtonWidget(
-                    destinationPage: IntroSliderPage(),
+        body: SingleChildScrollView(
+          child: Stack(
+            children: [
+              UpSide(
+                imgAsset: MyImages.auth1,
+                destinationPage: const IntroSliderPage(),
+              ),
+              Container(
+                margin: const EdgeInsets.only(top: 495),
+                padding: const EdgeInsets.fromLTRB(16, 31, 16, 10),
+                decoration: const BoxDecoration(
+                  color: AppColors.background2,
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(10),
+                    topRight: Radius.circular(10),
                   ),
-                  titleText: 'Welcome',
                 ),
-                const SizedBox(
-                  height: 400,
-                ),
-                Container(
-                  padding: const EdgeInsets.fromLTRB(17, 30, 17, 40),
-                  decoration: const BoxDecoration(
-                    color: AppColors.background2,
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(10),
-                      topRight: Radius.circular(10),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    const Text(
+                      'Welcome',
+                      style: MyTextStyles.titleStyle3,
                     ),
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: [
-                      const Text(
-                        'Welcome',
-                        style: MyTextStyles.titleStyle3,
-                      ),
-                      const Text(
-                        AppString.forgotPasswordText,
-                        style: MyTextStyles.bodyText,
-                      ),
-                      const SizedBox(
-                        height: 27,
-                      ),
-                      const GoogleSignInButton(),
-                      const SizedBox(
-                        height: 12,
-                      ),
-                      AuthButton(
-                        onPressedCallback: () {
-                          Navigator.pushReplacement(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => const LoginScreen(),
-                            ),
-                          );
-                        },
-                      ),
-                      const SizedBox(
-                        height: 10,
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          RichText(
-                            text: TextSpan(
-                              children: [
-                                const TextSpan(
-                                  text: 'Already have an account ? ',
-                                  style: MyTextStyles.bodyText,
-                                ),
-                                TextSpan(
-                                  text: 'Login',
-                                  style: MyTextStyles.styleText1,
-                                  recognizer: TapGestureRecognizer()
-                                    ..onTap = () {
-                                      Navigator.pushReplacement(
-                                        context,
-                                        MaterialPageRoute(
-                                          builder: (context) =>
-                                              const LoginScreen(),
-                                        ),
-                                      );
-                                    },
-                                ),
-                              ],
-                            ),
+                    const Text(
+                      AppString.forgotPasswordText,
+                      style: MyTextStyles.bodyText,
+                    ),
+                    const SizedBox(
+                      height: 27,
+                    ),
+                    const GoogleSignInButton(),
+                    const SizedBox(
+                      height: 12,
+                    ),
+                    AuthButton(
+                      onPressedCallback: () {
+                        Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const LoginScreen(),
                           ),
-                        ],
-                      ),
-                    ],
-                  ),
+                        );
+                      },
+                    ),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        RichText(
+                          text: TextSpan(
+                            children: [
+                              const TextSpan(
+                                text: 'Already have an account ? ',
+                                style: MyTextStyles.bodyText,
+                              ),
+                              TextSpan(
+                                text: 'Login',
+                                style: MyTextStyles.styleText1,
+                                recognizer: TapGestureRecognizer()
+                                  ..onTap = () {
+                                    Navigator.pushReplacement(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) =>
+                                            const LoginScreen(),
+                                      ),
+                                    );
+                                  },
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(
+                      height: 39,
+                    )
+                  ],
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       ),
