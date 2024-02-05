@@ -7,8 +7,7 @@ import 'package:grocery/constants/langs/app_strings.dart';
 import 'package:grocery/constants/themes/colors/app_colors.dart';
 import 'package:grocery/screens/auth/auth_login.dart';
 import 'package:grocery/screens/auth/auth_wdlcome.dart';
-import 'package:grocery/widgets/auth_widgets/app_bar.dart';
-import 'package:grocery/widgets/auth_widgets/back_button.dart';
+import 'package:grocery/widgets/auth_widgets/up_ide.dart';
 
 import '../../components/buttons/elevated_button.dart';
 import '../../constants/image_strings.dart';
@@ -29,112 +28,98 @@ class SignUpScreen extends StatelessWidget {
       ),
       child: Scaffold(
         body: SingleChildScrollView(
-          child: Container(
-            decoration:  BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage(MyImages.auth3),
-                fit: BoxFit.cover,
+          child: Stack(
+            children: [
+              UpSide(
+                imgAsset: MyImages.auth3,
+                destinationPage: const WelcomeScreen(),
               ),
-            ),
-            child: Center(
-              child: Column(
-                children: [
-                  CustomAppBar(
-                    leading: const BackButtonWidget(
-                      destinationPage: WelcomeScreen(),
-                    ),
-                    titleText: 'Welcome',
+              Container(
+                margin: const EdgeInsets.only(top: 440),
+                padding: const EdgeInsets.fromLTRB(16, 15, 16, 10),
+                decoration: const BoxDecoration(
+                  color: AppColors.background2,
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(10),
+                    topRight: Radius.circular(10),
                   ),
-                  const SizedBox(
-                    height: 350,
-                  ),
-                  Container(
-                    padding: const EdgeInsets.fromLTRB(16, 20, 16, 10),
-                    decoration: const BoxDecoration(
-                      color: AppColors.background2,
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(10),
-                        topRight: Radius.circular(10),
-                      ),
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    const Text(
+                      'Create account',
+                      style: MyTextStyles.titleStyle3,
                     ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                    const Text(
+                      AppString.signUpText,
+                      style: MyTextStyles.bodyText,
+                    ),
+                    const SizedBox(
+                      height: 26,
+                    ),
+                    const EmailTextField(),
+                    const SizedBox(
+                      height: 5,
+                    ),
+                    const PhoneTextField(),
+                    const SizedBox(
+                      height: 5,
+                    ),
+                    const PasswordField(),
+                    const SizedBox(
+                      height: 9,
+                    ),
+                    const SizedBox(
+                      height: 9,
+                    ),
+                    CustomElevatedButton(
+                      buttonText: 'Signup',
+                      onPressedCallback: () {
+                        Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const HomPage(),
+                          ),
+                        );
+                      },
+                    ),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        const Text(
-                          'Create account',
-                          style: MyTextStyles.titleStyle3,
-                        ),
-                        const Text(
-                          AppString.signUpText,
-                          style: MyTextStyles.bodyText,
-                        ),
-                        const SizedBox(
-                          height: 26,
-                        ),
-                        const EmailTextField(),
-                        const SizedBox(
-                          height: 5,
-                        ),
-                        const PhoneTextField(),
-                        const SizedBox(
-                          height: 5,
-                        ),
-                        const PasswordField(),
-                        const SizedBox(
-                          height: 9,
-                        ),
-                        const SizedBox(
-                          height: 9,
-                        ),
-                        CustomElevatedButton(
-                          buttonText: 'Signup',
-                          onPressedCallback: () {
-                            Navigator.pushReplacement(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => const HomPage(),
+                        RichText(
+                          text: TextSpan(
+                            children: [
+                              const TextSpan(
+                                text: 'Already have an account ? ',
+                                style: MyTextStyles.bodyText,
                               ),
-                            );
-                          },
-                        ),
-                        const SizedBox(
-                          height: 10,
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            RichText(
-                              text: TextSpan(
-                                children: [
-                                  const TextSpan(
-                                    text: 'Already have an account ? ',
-                                    style: MyTextStyles.bodyText,
-                                  ),
-                                  TextSpan(
-                                    text: 'Login',
-                                    style: MyTextStyles.styleText1,
-                                    recognizer: TapGestureRecognizer()
-                                      ..onTap = () {
-                                        Navigator.pushReplacement(
-                                          context,
-                                          MaterialPageRoute(
-                                            builder: (context) =>
-                                                const LoginScreen(),
-                                          ),
-                                        );
-                                      },
-                                  ),
-                                ],
+                              TextSpan(
+                                text: 'Login',
+                                style: MyTextStyles.styleText1,
+                                recognizer: TapGestureRecognizer()
+                                  ..onTap = () {
+                                    Navigator.pushReplacement(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) =>
+                                            const LoginScreen(),
+                                      ),
+                                    );
+                                  },
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ],
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
-            ),
+            ],
           ),
         ),
       ),
