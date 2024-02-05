@@ -5,9 +5,10 @@ import 'package:grocery/widgets/auth_widgets/back_button.dart';
 import '../../screens/auth/auth_wdlcome.dart';
 
 class UpSide extends StatelessWidget {
-  const UpSide({super.key, required this.imgAsset});
+  const UpSide({super.key, required this.imgAsset, required this.destinationPage});
 
   final String imgAsset;
+  final Widget destinationPage;
 
   @override
   Widget build(BuildContext context) {
@@ -26,8 +27,8 @@ class UpSide extends StatelessWidget {
           ),
         ),
         CustomAppBar(
-          leading: const BackButtonWidget(
-            destinationPage: WelcomeScreen(),
+          leading:  BackButtonWidget(
+            destinationPage: destinationPage,
           ),
           titleText: 'Welcome',
         ),
