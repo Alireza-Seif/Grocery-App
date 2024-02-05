@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:grocery/components/text_field/email_text_field.dart';
 import 'package:grocery/components/text_field/password_text_field.dart';
 import 'package:grocery/screens/auth/auth_sign_up.dart';
+import 'package:grocery/screens/auth/auth_wdlcome.dart';
 import 'package:grocery/widgets/auth_widgets/up_ide.dart';
 
 import '../../components/buttons/elevated_button.dart';
@@ -10,11 +11,9 @@ import '../../constants/image_strings.dart';
 import '../../constants/langs/app_strings.dart';
 import '../../constants/themes/app_theme.dart';
 import '../../constants/themes/colors/app_colors.dart';
-import '../../widgets/auth_widgets/app_bar.dart';
-import '../../widgets/auth_widgets/back_button.dart';
+
 import '../../widgets/auth_widgets/row_auth_password.dart';
 import '../home_page.dart';
-import 'auth_wdlcome.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -31,9 +30,9 @@ class LoginScreen extends StatelessWidget {
         body: SingleChildScrollView(
           child: Stack(
             children: [
-              UpSide(imgAsset: MyImages.auth2),
+              UpSide(imgAsset: MyImages.auth2,destinationPage: const WelcomeScreen()),
               Container(
-                margin: const EdgeInsets.only(top:450),
+                margin: const EdgeInsets.only(top: 450),
                 padding: const EdgeInsets.fromLTRB(16, 30, 16, 10),
                 decoration: const BoxDecoration(
                   color: AppColors.background2,
@@ -110,7 +109,10 @@ class LoginScreen extends StatelessWidget {
                           ),
                         ),
                       ],
-                    ),SizedBox(height: 20,)
+                    ),
+                    const SizedBox(
+                      height: 20,
+                    ),
                   ],
                 ),
               ),
