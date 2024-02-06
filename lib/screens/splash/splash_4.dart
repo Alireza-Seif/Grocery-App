@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../../components/buttons/elevated_button.dart';
 import '../../constants/image_strings.dart';
 import '../../constants/langs/app_strings.dart';
 import '../../constants/themes/app_theme.dart';
-import '../../widgets/auth_widgets/row_indicator.dart';
-import '../auth/auth_wdlcome.dart';
 
 class SplashScreen4 extends StatefulWidget {
   const SplashScreen4({super.key});
@@ -23,41 +20,27 @@ class _SplashScreen4State extends State<SplashScreen4> {
       body: SafeArea(
         child: Container(
           padding: const EdgeInsets.fromLTRB(0, 59, 0, 0),
-          decoration:  BoxDecoration(
+          decoration: BoxDecoration(
             image: DecorationImage(
-                image: AssetImage(MyImages.splash4),
-                fit: BoxFit.cover),
+                image: AssetImage(MyImages.splash4), fit: BoxFit.fill),
           ),
-          child: Center(
+          child: const Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                const Text(
+                Text(
                   ''' Get Discounts 
 On All Products''',
                   style: MyTextStyles.titleStyle1,
                 ),
-                const SizedBox(
+                SizedBox(
                   height: 17,
                 ),
-                const Text(
+                Text(
                   AppString.splashScreenText,
                   style: MyTextStyles.bodyText,
                 ),
-                const SizedBox(height: 479),
-                RowIndicator(currentIndex: currentIndex + 3),
-                const SizedBox(height: 32),
-                CustomElevatedButton(
-                  buttonText: 'Get started',
-                  onPressedCallback: () {
-                    Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const WelcomeScreen(),
-                      ),
-                    );
-                  },
-                ),
+                SizedBox(height: 479),
               ],
             ),
           ),

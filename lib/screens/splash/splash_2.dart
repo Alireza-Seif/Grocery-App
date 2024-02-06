@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../../components/buttons/elevated_button.dart';
 import '../../constants/image_strings.dart';
 import '../../constants/langs/app_strings.dart';
 import '../../constants/themes/app_theme.dart';
-import '../../widgets/auth_widgets/row_indicator.dart';
-import '../auth/auth_wdlcome.dart';
 
 class SplashScreen2 extends StatefulWidget {
   const SplashScreen2({super.key});
@@ -27,38 +24,26 @@ class _SplashScreen2State extends State<SplashScreen2> {
           decoration:  BoxDecoration(
             image: DecorationImage(
                 image: AssetImage(MyImages.splash2),
-                fit: BoxFit.cover),
+                fit: BoxFit.fill),
           ),
-          child: Center(
+          child: const Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                const Text(
+                Text(
                   '''   Buy Quality 
 Dairy Products''',
                   style: MyTextStyles.titleStyle1,
                 ),
-                const SizedBox(
+                SizedBox(
                   height: 17,
                 ),
-                const Text(
+                Text(
                   AppString.splashScreenText,
                   style: MyTextStyles.bodyText,
                 ),
-                const SizedBox(height: 479),
-                RowIndicator(currentIndex: currentIndex + 1),
-                const SizedBox(height: 32),
-                CustomElevatedButton(
-                  buttonText: 'Get started',
-                  onPressedCallback: () {
-                    Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const WelcomeScreen(),
-                      ),
-                    );
-                  },
-                )
+                SizedBox(height: 479),
+              
               ],
             ),
           ),
