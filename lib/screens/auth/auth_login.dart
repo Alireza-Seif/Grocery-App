@@ -30,10 +30,13 @@ class LoginScreen extends StatelessWidget {
         body: SingleChildScrollView(
           child: Stack(
             children: [
-              UpSide(imgAsset: MyImages.auth2,destinationPage: const WelcomeScreen()),
+              UpSide(
+                imgAsset: MyImages.auth2,
+                destinationPage: const WelcomeScreen(),
+              ),
               Container(
                 margin: const EdgeInsets.only(top: 450),
-                padding: const EdgeInsets.fromLTRB(16, 30, 16, 10),
+                padding: const EdgeInsets.fromLTRB(16, 15, 16, 10),
                 decoration: const BoxDecoration(
                   color: AppColors.background2,
                   borderRadius: BorderRadius.only(
@@ -63,7 +66,7 @@ class LoginScreen extends StatelessWidget {
                     const SizedBox(
                       height: 9,
                     ),
-                    const RowRemember(),
+                     RowRemember(),
                     const SizedBox(
                       height: 9,
                     ),
