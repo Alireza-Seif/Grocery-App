@@ -42,14 +42,6 @@ class _MyPromoSliderState extends State<MyPromoSlider> {
             onPageChanged: (index, _) => controller.updatePageIndicator(index),
           ),
         ),
-        const Positioned(
-          bottom: 50,
-          left: 43,
-          right: 0,
-            child: Text(
-          '20% of on your\nfirst purchase',
-          style: MyTextStyles.styleBanner,
-        )),
         Positioned(
           bottom: 22,
           left: 17,
@@ -70,6 +62,13 @@ class _MyPromoSliderState extends State<MyPromoSlider> {
             ),
           ),
         ),
+        const Positioned(
+          bottom: 50,
+          left: 43, 
+            child: Text(
+          '20% of on your\nfirst purchase',
+          style: MyTextStyles.styleBanner,
+        )),
       ],
     );
   }
