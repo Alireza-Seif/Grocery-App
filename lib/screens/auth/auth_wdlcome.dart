@@ -1,7 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:grocery/screens/auth/auth_login.dart';
-import 'package:grocery/widgets/auth_widgets/app_bar.dart';
 import 'package:grocery/widgets/auth_widgets/up_ide.dart';
 
 import '../../components/buttons/auth_button.dart';
@@ -10,7 +9,6 @@ import '../../constants/image_strings.dart';
 import '../../constants/langs/app_strings.dart';
 import '../../constants/themes/app_theme.dart';
 import '../../constants/themes/colors/app_colors.dart';
-import '../../widgets/auth_widgets/back_button.dart';
 import '../splash/intro_slider.dart';
 
 class WelcomeScreen extends StatelessWidget {

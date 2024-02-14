@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:grocery/widgets/auth_widgets/app_bar.dart';
 import 'package:grocery/widgets/auth_widgets/back_button.dart';
 
-import '../../screens/auth/auth_wdlcome.dart';
 
 class UpSide extends StatelessWidget {
   const UpSide({super.key, required this.imgAsset, required this.destinationPage});
