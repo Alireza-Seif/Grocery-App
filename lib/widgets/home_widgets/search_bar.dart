@@ -10,7 +10,7 @@ class MySearchBar extends StatefulWidget {
 }
 
 class _MySearchBarState extends State<MySearchBar> {
-  TextEditingController _searchController = TextEditingController();
+  final TextEditingController _searchController = TextEditingController();
   bool isTextFieldFocused = false;
 
   @override
@@ -23,20 +23,22 @@ class _MySearchBarState extends State<MySearchBar> {
           labelText: 'Search keywords...',
           filled: true,
           fillColor: AppColors.background2,
-          labelStyle: isTextFieldFocused? const TextStyle(color: AppColors.primary) : MyTextStyles.bodyText  ,
+          labelStyle: isTextFieldFocused
+              ? const TextStyle(color: AppColors.primary)
+              : MyTextStyles.bodyText,
           prefixIcon: Padding(
             padding: const EdgeInsets.only(right: 20, left: 20),
             child: Icon(
               Icons.search,
               size: 30,
-              color: isTextFieldFocused ? AppColors.primary : Colors.grey,
+              color: isTextFieldFocused ? AppColors.primary : AppColors.text2,
             ),
           ),
           suffixIcon: Padding(
             padding: const EdgeInsets.only(right: 20),
             child: Icon(
               Icons.display_settings,
-              color: isTextFieldFocused ? AppColors.primary : Colors.grey,
+              color: isTextFieldFocused ? AppColors.primary : AppColors.text2,
             ),
           ),
           border: const OutlineInputBorder(
