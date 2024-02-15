@@ -1,15 +1,16 @@
+// ignore_for_file: constant_identifier_names
+
 import 'package:flutter/foundation.dart' show immutable;
 
 @immutable
-class AppIcons{
+class AppIcons {
   static const _path = 'assets/icons';
 
-  static const google = '$_path/Google.svg';
-
-  static const vector = '$_path/Vector.svg';
-
-  static const emails = '$_path/Mail.svg';
+  //auth icons
+  static const google = '$_path/auth/Google.svg';
+  static const vector = '$_path/auth/Vector.svg';
+  static const emails = '$_path/auth/Mail.svg';
+  static const lock = '$_path/auth/Lock.svg';
 
   const AppIcons._();
-  
 }

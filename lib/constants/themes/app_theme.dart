@@ -3,6 +3,18 @@ import 'package:flutter/material.dart';
 import 'colors/app_colors.dart';
 
 class MyTextStyles {
+  
+  // body text styles
+
+  static const TextStyle styleBanner = TextStyle(
+    color: Colors.black,
+    fontSize: 18.0,
+    fontFamily: 'Poppins',
+    fontWeight: FontWeight.w600,
+  );
+
+  //title text styles
+
   static const TextStyle titleStyle1 = TextStyle(
       fontWeight: FontWeight.w700, fontSize: 30, fontFamily: 'Poppins');
 
@@ -12,6 +24,7 @@ class MyTextStyles {
     fontFamily: 'Poppins',
     color: AppColors.text2,
   );
+
   static const TextStyle titleStyle2 = TextStyle(
     fontSize: 18,
     fontWeight: FontWeight.w500,
@@ -29,10 +42,10 @@ class MyTextStyles {
     fontWeight: FontWeight.w600,
   );
 
-  static const TextStyle styleBanner = TextStyle(
-    color: Colors.black,
-    fontSize: 18.0,
+  static const TextStyle titleStyle4 = TextStyle(
+    color: Color(0xFF868889),
+    fontSize: 10,
     fontFamily: 'Poppins',
-    fontWeight: FontWeight.w600,
+    fontWeight: FontWeight.w500,
   );
 }
