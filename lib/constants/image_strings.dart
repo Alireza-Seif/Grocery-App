@@ -20,9 +20,11 @@ class MyImages {
   static String promoBanner4 = 'assets/images/banners/promo_banner_4.webp';
 
 // Categories
-  static String categorie1 = 'assets/images/categories/vegetables.png';
-  static String categorie2 = 'assets/images/categories/fruits.png';
-  static String categorie3 = 'assets/images/categories/beverages.png';
-  static String categorie4 = 'assets/images/categories/grocery.png';
-  static String categorie5 = 'assets/images/categories/edible_oil.png';
+  static String categorie1 = 'assets/images/categories/vegetables.webp';
+  static String categorie2 = 'assets/images/categories/fruits.webp';
+  static String categorie3 = 'assets/images/categories/beverages.webp';
+  static String categorie4 = 'assets/images/categories/grocery.webp';
+  static String categorie5 = 'assets/images/categories/edible_oil.webp';
+  static String categorie6 = 'assets/images/categories/house_hold.webp';
+  static String categorie7 = 'assets/images/categories/baby_care.webp';
 }
