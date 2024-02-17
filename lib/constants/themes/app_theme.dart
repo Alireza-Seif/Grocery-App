@@ -48,4 +48,11 @@ class MyTextStyles {
     fontFamily: 'Poppins',
     fontWeight: FontWeight.w500,
   );
+
+  static const TextStyle titleStyle5 = TextStyle(
+    fontSize: 18,
+    fontWeight: FontWeight.w500,
+    fontFamily: 'Poppins',
+    color: Colors.black,
+  );
 }

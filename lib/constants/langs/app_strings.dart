@@ -1,4 +1,5 @@
 import 'package:flutter/foundation.dart' show immutable;
+import 'package:grocery/widgets/home_widgets/categories.dart';
 
 @immutable
 class AppString {
@@ -21,6 +22,9 @@ sadipscing elitr, sed diam nonumy''';
   
 //sign up
   static const signUpText = 'Quickly create account';
+
+// home page
+  static const categories = 'Categories';
 
 
 }
