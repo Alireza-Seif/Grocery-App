@@ -4,7 +4,7 @@ import 'package:grocery/components/text_field/email_text_field.dart';
 import 'package:grocery/components/text_field/password_text_field.dart';
 import 'package:grocery/screens/auth/auth_sign_up.dart';
 import 'package:grocery/screens/auth/auth_wdlcome.dart';
-import 'package:grocery/widgets/auth_widgets/up_ide.dart';
+import 'package:grocery/widgets/auth_widgets/up_side.dart';
 
 import '../../components/buttons/elevated_button.dart';
 import '../../constants/image_strings.dart';
@@ -13,7 +13,7 @@ import '../../constants/themes/app_theme.dart';
 import '../../constants/themes/colors/app_colors.dart';
 
 import '../../widgets/auth_widgets/row_auth_password.dart';
-import '../home_page.dart';
+import '../home/home_page.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -66,7 +66,7 @@ class LoginScreen extends StatelessWidget {
                     const SizedBox(
                       height: 9,
                     ),
-                     RowRemember(),
+                     const RowRemember(),
                     const SizedBox(
                       height: 9,
                     ),

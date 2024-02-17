@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 
 class PromoView extends StatefulWidget {
-   PromoView({super.key, required PageController controller});
-
-    var controller;
-
-
+  const PromoView({super.key, required PageController controller, this.myController});
+  final dynamic myController;
   @override
   State<PromoView> createState() => _PromoViewState();
 }
@@ -27,7 +24,7 @@ class _PromoViewState extends State<PromoView> {
   Widget build(BuildContext context) {
     return PageView(
       allowImplicitScrolling: true,
-      controller: widget.controller,
+      controller: widget.myController,
       children: [
         myPages(images[0]),
         myPages(images[1]),
