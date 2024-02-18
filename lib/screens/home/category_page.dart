@@ -5,7 +5,7 @@ import 'package:grocery/constants/themes/colors/app_colors.dart';
 import 'package:grocery/screens/home/home_page.dart';
 
 import '../../constants/themes/app_theme.dart';
-import '../../widgets/home_widgets/app_bar_pages.dart';
+import '../../widgets/home_widgets/app_barr_pages.dart';
 
 class CategoryPage extends StatelessWidget {
   const CategoryPage({super.key});

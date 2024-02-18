@@ -49,7 +49,7 @@ class _MyPromoSliderState extends State<MyPromoSlider> {
           child: Obx(
             () => Row(
               children: [
-                for (final i = 0; i < 4; i++)
+                for (var i = 0; i < 4; i++)
                   MyCircularContainer(
                     width: controller.carousalCurrentIndex.value == i ? 24 : 6,
                     height: 6,

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../../constants/themes/colors/app_colors.dart';
 
 class RowIndicator extends StatelessWidget {
-  final int currentIndex;
+  final currentIndex;
 
   const RowIndicator({super.key, required this.currentIndex});
 

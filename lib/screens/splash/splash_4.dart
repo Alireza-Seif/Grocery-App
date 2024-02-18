@@ -12,7 +12,7 @@ class SplashScreen4 extends StatefulWidget {
 }
 
 class _SplashScreen4State extends State<SplashScreen4> {
-  int currentIndex = 0;
+  final dynamic currentIndex = 0;
 
   @override
   Widget build(BuildContext context) {
