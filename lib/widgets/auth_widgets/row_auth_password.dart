@@ -6,7 +6,7 @@ import '../../constants/themes/app_theme.dart';
 
 
 class RowRemember extends StatefulWidget {
-  const RowRemember({super.key});
+  RowRemember({super.key});
 
   @override
   State<RowRemember> createState() => _RowRememberState();

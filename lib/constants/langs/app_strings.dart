@@ -1,4 +1,5 @@
 import 'package:flutter/foundation.dart' show immutable;
+import 'package:grocery/widgets/home_widgets/categories.dart';
 
 @immutable
 class AppString {

@@ -17,7 +17,7 @@ class MyRoundedImage extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onPressed,
-      child: SizedBox(
+      child: Container(
         width: 490,
         height: 327,
         child: ClipRRect(

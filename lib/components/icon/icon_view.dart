@@ -17,7 +17,6 @@ class IconView extends StatelessWidget {
   @override
   Widget build(BuildContext context) => SvgPicture.asset(
         icon,
-        // ignore: deprecated_member_use
         color: color,
         height: height,
         width: width,

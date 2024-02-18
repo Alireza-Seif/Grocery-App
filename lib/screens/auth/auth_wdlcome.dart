@@ -1,7 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:grocery/screens/auth/auth_login.dart';
-import 'package:grocery/widgets/auth_widgets/up_side.dart';
+import 'package:grocery/widgets/auth_widgets/up_ide.dart';
 
 import '../../components/buttons/auth_button.dart';
 import '../../components/buttons/google_button.dart';

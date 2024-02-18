@@ -7,12 +7,12 @@ import 'package:grocery/constants/langs/app_strings.dart';
 import 'package:grocery/constants/themes/colors/app_colors.dart';
 import 'package:grocery/screens/auth/auth_login.dart';
 import 'package:grocery/screens/auth/auth_wdlcome.dart';
-import 'package:grocery/widgets/auth_widgets/up_side.dart';
+import 'package:grocery/widgets/auth_widgets/up_ide.dart';
 
 import '../../components/buttons/elevated_button.dart';
 import '../../constants/image_strings.dart';
 import '../../constants/themes/app_theme.dart';
-import '../home/home_page.dart';
+import '../home_page.dart';
 
 class SignUpScreen extends StatelessWidget {
   const SignUpScreen({super.key});
