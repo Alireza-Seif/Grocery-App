@@ -35,7 +35,7 @@ class _RowRememberState extends State<RowRemember> {
           style: MyTextStyles.bodyText,
         ),
         const SizedBox(
-          width: 71,
+          width: 65,
         ),
         TextButton(
           onPressed: () {},
