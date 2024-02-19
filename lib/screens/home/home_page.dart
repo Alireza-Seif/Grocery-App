@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 import 'package:grocery/widgets/home_widgets/promo_slider.dart';
 
+import '../../constants/themes/app_theme.dart';
 import '../../widgets/home_widgets/categories.dart';
 import '../../widgets/home_widgets/search_bar.dart';
 
@@ -36,6 +37,9 @@ class _HomPageState extends State<HomPage> {
                     height: 10,
                   ),
                   Categories(),
+                  
+                  // products
+                  Column(children: [Row(children: [Text('Featured products',style: MyTextStyles.styleBanner,),],)],)
                 ],
               ),
             ),

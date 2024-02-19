@@ -17,32 +17,30 @@ class _SplashScreen1State extends State<SplashScreen1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: Container(
-          padding: const EdgeInsets.fromLTRB(0, 59, 0, 0),
-          decoration: BoxDecoration(
-            image: DecorationImage(
-                image: AssetImage(MyImages.splash1), fit: BoxFit.fill),
-          ),
-          child: Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                const Text(
-                  'Welcome to',
-                  style: MyTextStyles.titleStyle1,
-                ),
-                Image(
-                  image: AssetImage(MyImages.bigCart),
-                ),
-                const SizedBox(height: 14),
-                const Text(
-                  AppString.splashScreenText,
-                  style: MyTextStyles.bodyText,
-                ),
-                const SizedBox(height: 479),
-              ],
-            ),
+      body: Container(
+        padding: const EdgeInsets.fromLTRB(0, 59, 0, 0),
+        decoration: BoxDecoration(
+          image: DecorationImage(
+              image: AssetImage(MyImages.splash1), fit: BoxFit.fill),
+        ),
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              const Text(
+                'Welcome to',
+                style: MyTextStyles.titleStyle1,
+              ),
+              Image(
+                image: AssetImage(MyImages.bigCart),
+              ),
+              const SizedBox(height: 14),
+              const Text(
+                AppString.splashScreenText,
+                style: MyTextStyles.bodyText,
+              ),
+              const SizedBox(height: 479),
+            ],
           ),
         ),
       ),
