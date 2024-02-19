@@ -23,6 +23,7 @@ class _MyPromoSliderState extends State<MyPromoSlider> {
     return Stack(
       children: [
         CarouselSlider(
+          
           items: [
             MyRoundedImage(
               imageUrl: MyImages.promoBanner1,
@@ -40,6 +41,13 @@ class _MyPromoSliderState extends State<MyPromoSlider> {
           options: CarouselOptions(
             viewportFraction: 1,
             onPageChanged: (index, _) => controller.updatePageIndicator(index),
+                autoPlay: true,
+            aspectRatio: 2.0,
+            enlargeCenterPage: true,
+            
+            initialPage: 0,
+            autoPlayInterval: const Duration(seconds: 3),
+            pauseAutoPlayOnTouch: true,
           ),
         ),
         Positioned(
