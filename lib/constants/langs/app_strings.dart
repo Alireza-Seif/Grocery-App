@@ -25,5 +25,12 @@ sadipscing elitr, sed diam nonumy''';
 // home page
   static const categories = 'Categories';
 
+// profile page
+  static const tProfileHeading = 'Olivia Austin';
+  
+  static const tProfileSubHeading = 'oliviaaustin@gmail.com';
+
+
+
 
 }

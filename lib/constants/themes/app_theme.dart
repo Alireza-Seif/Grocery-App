@@ -41,9 +41,15 @@ class MyTextStyles {
     fontFamily: 'Poppins',
     fontWeight: FontWeight.w600,
   );
+  static const TextStyle styleText2 = TextStyle(
+    color: AppColors.text2,
+    fontSize: 12,
+    fontFamily: 'Poppins',
+    fontWeight: FontWeight.w400,
+  );
 
   static const TextStyle titleStyle4 = TextStyle(
-    color: Color(0xFF868889),
+    color: AppColors.text2,
     fontSize: 10,
     fontFamily: 'Poppins',
     fontWeight: FontWeight.w500,
