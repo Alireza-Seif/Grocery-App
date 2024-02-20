@@ -18,7 +18,7 @@ class _SplashScreen3State extends State<SplashScreen3> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        padding: const EdgeInsets.fromLTRB(0, 59, 0, 0),
+        padding: const EdgeInsets.fromLTRB(0, 96, 0, 0),
         decoration: BoxDecoration(
           image: DecorationImage(
               image: AssetImage(MyImages.splash3), fit: BoxFit.fill),
