@@ -27,4 +27,8 @@ class MyImages {
   static String categorie5 = 'assets/images/categories/edible_oil.webp';
   static String categorie6 = 'assets/images/categories/house_hold.webp';
   static String categorie7 = 'assets/images/categories/baby_care.webp';
+
+// Profile
+  static String user0 = 'assets/images/user/user_img.webp';
+
 }

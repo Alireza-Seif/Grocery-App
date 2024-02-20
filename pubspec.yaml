@@ -76,6 +76,7 @@ flutter:
     - assets/icons/
     - assets/icons/auth/
     - assets/images/
+    - assets/images/user/
     - assets/images/auth/
     - assets/images/splash/
     - assets/images/banners/
