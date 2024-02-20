@@ -8,6 +8,7 @@ const double profileHeightl = 114;
 
 Widget buildTop() {
   const top = converHeight - profileHeightl / 2;
+  const bottom =  profileHeightl / 2;
 
   return Stack(
     clipBehavior: Clip.none,
@@ -17,6 +18,7 @@ Widget buildTop() {
         color: Colors.white,
         width: double.infinity,
         height: converHeight,
+        margin: const EdgeInsets.only(bottom: bottom),
       ),
       const Positioned(
         top: top,
