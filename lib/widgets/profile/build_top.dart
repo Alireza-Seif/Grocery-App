@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../constants/image_strings.dart';
+import 'build_cover_image.dart';
 
 const double converHeight = 145;
 
@@ -18,13 +18,12 @@ Widget buildTop() {
         width: double.infinity,
         height: converHeight,
       ),
-      Positioned(
+      const Positioned(
         top: top,
-        child: CircleAvatar(
-          radius: profileHeightl / 2,
-          backgroundImage: AssetImage(MyImages.user0),
-        ),
+        child: BuildCoverImage(),
       )
     ],
   );
 }
+
+
