@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grocery/constants/themes/colors/app_colors.dart';
 
 import 'build_cover_image.dart';
 
@@ -8,7 +9,7 @@ const double profileHeightl = 114;
 
 Widget buildTop() {
   const top = converHeight - profileHeightl / 2;
-  const bottom =  profileHeightl / 2;
+  const bottom = profileHeightl / 2 + 10;
 
   return Stack(
     clipBehavior: Clip.none,
@@ -23,9 +24,7 @@ Widget buildTop() {
       const Positioned(
         top: top,
         child: BuildCoverImage(),
-      )
+      ),
     ],
   );
 }
-
-
