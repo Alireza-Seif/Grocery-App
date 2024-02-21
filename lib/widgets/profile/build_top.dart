@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:grocery/constants/themes/colors/app_colors.dart';
 
 import 'build_cover_image.dart';
 
