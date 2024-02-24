@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 
-
 import 'package:grocery/widgets/home_widgets/promo_slider.dart';
 
 import '../../constants/themes/app_theme.dart';
+
 import '../../widgets/home_widgets/categories.dart';
 import '../../widgets/home_widgets/search_bar.dart';
+import '../user/profile_setting_screen.dart';
 
 class HomPage extends StatefulWidget {
   const HomPage({Key? key}) : super(key: key);
@@ -23,23 +24,50 @@ class _HomPageState extends State<HomPage> {
           child: Container(
             padding: const EdgeInsets.fromLTRB(17, 0, 17, 0),
             color: Colors.white,
-            child: const Center(
+            child: Center(
               child: Column(
                 children: [
                   // searchbar
-                  MySearchBar(),
+                  const MySearchBar(),
 
                   // banner
-                  MyPromoSlider(),
+                  const MyPromoSlider(),
 
                   // Categories
-                  SizedBox(
+                  const SizedBox(
                     height: 10,
                   ),
-                  Categories(),
-                  
+                  const Categories(),
+
                   // products
-                  Column(children: [Row(children: [Text('Featured products',style: MyTextStyles.styleBanner,),],)],)
+                  Column(
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          const Text(
+                            'Featured products',
+                            style: MyTextStyles.styleBanner,
+                          ),
+                          IconButton(
+                            onPressed: () {
+                              Navigator.pushReplacement(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) =>
+                                      const ProfileSettingScreen(),
+                                ),
+                              );
+                            },
+                            icon: const Icon(
+                              Icons.arrow_forward_ios_outlined,
+                            ),
+                            iconSize: 20,
+                          ),
+                        ],
+                      ),
+                    ],
+                  )
                 ],
               ),
             ),
