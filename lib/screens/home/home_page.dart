@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:grocery/constants/themes/colors/app_colors.dart';
+import 'package:grocery/widgets/btn_nav_bar/floating_action_button.dart';
 
 import 'package:grocery/widgets/home_widgets/promo_slider.dart';
 
@@ -67,13 +70,15 @@ class _HomPageState extends State<HomPage> {
                         ],
                       ),
                     ],
-                  )
+                  ),
                 ],
               ),
             ),
           ),
         ),
       ),
+      floatingActionButton: MyFloattingActionBtton(),
     );
   }
 }
+
