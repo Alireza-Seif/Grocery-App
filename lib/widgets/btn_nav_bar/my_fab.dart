@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:grocery/constants/themes/colors/app_colors.dart';
 
-class MyFloattingActionBtton extends StatelessWidget {
-  const MyFloattingActionBtton({
+class MyFAB extends StatelessWidget {
+  const MyFAB({
     super.key,
   });
 
