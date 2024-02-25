@@ -2,6 +2,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:grocery/components/text_field/email_text_field.dart';
 import 'package:grocery/components/text_field/password_text_field.dart';
+import 'package:grocery/my_home_page.dart';
 import 'package:grocery/screens/auth/auth_sign_up.dart';
 import 'package:grocery/screens/auth/auth_wdlcome.dart';
 import 'package:grocery/widgets/auth_widgets/up_ide.dart';
@@ -77,7 +78,7 @@ class LoginScreen extends StatelessWidget {
                         Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const HomPage(),
+                            builder: (context) => const MyHomePage(),
                           ),
                         );
                       },

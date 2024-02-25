@@ -9,7 +9,7 @@ import '../../constants/themes/app_theme.dart';
 
 import '../../widgets/home_widgets/categories.dart';
 import '../../widgets/home_widgets/search_bar.dart';
-import '../user/profile_setting_screen.dart';
+
 
 class HomPage extends StatefulWidget {
   const HomPage({Key? key}) : super(key: key);
@@ -54,13 +54,13 @@ class _HomPageState extends State<HomPage> {
                           ),
                           IconButton(
                             onPressed: () {
-                              Navigator.pushReplacement(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) =>
-                                      const ProfileSettingScreen(),
-                                ),
-                              );
+                              // Navigator.pushReplacement(
+                              //   context,
+                              //   MaterialPageRoute(
+                              //     builder: (context) =>
+                              //         const ProfileSettingScreen(),
+                              //   ),
+                              // );
                             },
                             icon: const Icon(
                               Icons.arrow_forward_ios_outlined,
@@ -77,9 +77,6 @@ class _HomPageState extends State<HomPage> {
           ),
         ),
       ),
-      floatingActionButton: const MyFAB(),
-      floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,
-      bottomNavigationBar: MyBNB(),
     );
   }
 }
