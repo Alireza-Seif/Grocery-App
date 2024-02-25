@@ -1,9 +1,28 @@
 import 'package:flutter/material.dart';
+import 'package:grocery/constants/themes/colors/app_colors.dart';
 
-class MyBNB extends StatelessWidget {
+class MyBNB extends StatefulWidget {
+  final PageController controller;
+
   const MyBNB({
-    super.key,
-  });
+    Key? key,
+    required this.controller,
+  }) : super(key: key);
+
+  @override
+  State<MyBNB> createState() => _MyBNBState();
+}
+
+class _MyBNBState extends State<MyBNB> {
+  int currentIndex = 0;
+
+  void nextPage(int index) {
+    setState(() {
+      currentIndex = index;
+    });
+    widget.controller.animateToPage(index,
+        duration: const Duration(milliseconds: 300), curve: Curves.easeIn);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -14,8 +33,9 @@ class MyBNB extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           IconButton(
-            onPressed: () {},
-            icon: const Icon(
+            onPressed: () => nextPage(0),
+            icon: Icon(
+              color: currentIndex == 0 ? Colors.black : AppColors.text2,
               Icons.home_outlined,
               size: 30,
             ),
@@ -24,8 +44,9 @@ class MyBNB extends StatelessWidget {
             width: 73,
           ),
           IconButton(
-            onPressed: () {},
-            icon: const Icon(
+            onPressed: () => nextPage(1),
+            icon: Icon(
+              color: currentIndex == 1 ? Colors.black : AppColors.text2,
               Icons.person_outline,
               size: 30,
             ),
@@ -35,7 +56,8 @@ class MyBNB extends StatelessWidget {
           ),
           IconButton(
             onPressed: () {},
-            icon: const Icon(
+            icon: Icon(
+              color: currentIndex == 2 ? Colors.black : AppColors.text2,
               Icons.favorite_outline,
               size: 30,
             ),
