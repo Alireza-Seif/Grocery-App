@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'package:grocery/widgets/btn_nav_bar/my_fab.dart';
-import 'package:grocery/widgets/btn_nav_bar/my_bnb.dart';
 
 import 'package:grocery/widgets/home_widgets/promo_slider.dart';
 

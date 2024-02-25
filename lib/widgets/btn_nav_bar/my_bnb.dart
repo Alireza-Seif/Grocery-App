@@ -27,7 +27,8 @@ class _MyBNBState extends State<MyBNB> {
   @override
   Widget build(BuildContext context) {
     return BottomAppBar(
-      color: Colors.white,
+         surfaceTintColor: Colors.white,
+         elevation: 0,
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.end,
         mainAxisAlignment: MainAxisAlignment.start,

@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:grocery/constants/image_strings.dart';
 import 'package:grocery/constants/langs/app_strings.dart';
 import 'package:grocery/constants/themes/colors/app_colors.dart';
-import 'package:grocery/screens/home/home_page.dart';
+import 'package:grocery/my_home_page.dart';
 
 import '../../constants/themes/app_theme.dart';
-import '../../widgets/home_widgets/app_barr_pages.dart';
+import '../../widgets/home_widgets/app_bar_pages.dart';
 
 class CategoryPage extends StatelessWidget {
   const CategoryPage({super.key});
@@ -45,7 +45,7 @@ class CategoryPage extends StatelessWidget {
       appBar: const PreferredSize(
         preferredSize: Size.fromHeight(70.0),
         child: AppBarPages(
-            destinationPage: HomPage(), titleText: AppString.categories),
+            destinationPage: MyHomePage(), titleText: AppString.categories),
       ),
       body: Container(padding: const EdgeInsets.fromLTRB(10, 5, 10, 0),
         color: AppColors.background2,
