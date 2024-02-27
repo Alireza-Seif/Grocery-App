@@ -13,8 +13,7 @@ class AppString {
 sadipscing elitr, sed diam nonumy''';
 
 //Forgot Password
-  static const forgotPasswordText = '''Lorem ipsum dolor sit amet, consetetur 
-sadipscing elitr, sed diam nonumy''';
+  static const forgotPasswordText = '''Lorem ipsum dolor sit amet, consetetur\n\t\t\t sadipscing elitr, sed diam nonumy''';
 
 //sign in
   static const signInText = 'Sign in to your account';
