@@ -74,4 +74,11 @@ class MyTextStyles {
     fontFamily: 'Poppins',
     color: Colors.black,
   );
+
+  // OTP
+
+     static const TextStyle otpStyle =TextStyle(
+        fontSize: 20,
+        color: Colors.black,fontWeight: FontWeight.w500,fontFamily: 'Poppins'
+      );
 }
