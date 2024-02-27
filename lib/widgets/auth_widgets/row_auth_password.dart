@@ -1,9 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:grocery/constants/themes/colors/app_colors.dart';
+import 'package:grocery/screens/auth/forgot_password.dart';
 
 import '../../constants/themes/app_theme.dart';
-
 
 class RowRemember extends StatefulWidget {
   RowRemember({super.key});
@@ -20,8 +21,10 @@ class _RowRememberState extends State<RowRemember> {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
-        Transform.scale(scale: 0.5,
-          child: CupertinoSwitch(activeColor: AppColors.primary,
+        Transform.scale(
+          scale: 0.5,
+          child: CupertinoSwitch(
+            activeColor: AppColors.primary,
             value: _lights,
             onChanged: (bool value) {
               setState(() {
@@ -38,7 +41,14 @@ class _RowRememberState extends State<RowRemember> {
           width: 65,
         ),
         TextButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const ForgotPassword(),
+              ),
+            );
+          },
           child: const Text(
             'Forgot password',
             style: TextStyle(fontSize: 15),
